@@ -1,0 +1,15 @@
+# Used by package managers
+/component/*
+/plugin/*
+/vendor/*
+composer.lock
+
+# Used for temporary storage
+/tmp/*
+
+# Used for sensitive/volatile config
+/.debug
+/.localconfig
+
+# Used by Vagrant
+/.vagrant/*

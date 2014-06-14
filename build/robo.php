@@ -64,7 +64,7 @@ class RoboFile {
 
 		foreach ($paths as $path) {
 			$command = 'mkdir -p ' . $path;
-			$message = sprintf(self::ERROR, 'Failed to create ' . $path);
+			$message = 'Failed to create ' . $path;
 			if ($this->taskExec($command)->run()->wasSuccessful()) {
 				$message = 'Created ' . $path;
 			}

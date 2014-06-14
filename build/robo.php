@@ -76,6 +76,8 @@ class RoboFile {
  * @desc Reset's platform application skeleton.
  */
 	public function platformReset() {
+		$this->cleanTmp();
+
 		$this->taskReplaceInFile('composer.json')
 			->regex('/"version": "[^\"]*"/')
 			->to('"version": "0.0.0"')

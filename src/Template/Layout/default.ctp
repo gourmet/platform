@@ -85,7 +85,6 @@ HTML;
 
 		</footer>
 
-		<?= $this->element('sql_dump'); ?>
 		<?= $this->fetch('script'); ?>
 
 	</body>

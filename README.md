@@ -34,9 +34,8 @@ A skeleton to quickly cook [gourmet][gourmet] [CakePHP][cakephp] web apps.
 
 It is assumed that you have the following installed globally:
 
-* [Composer][composer] - PHP package manager _(required)_
-* [Bower][bower] - Front-end package manager _(required)_
-* [Vagrant][vagrant] - Portable developement environments _(optional)_
+* [Composer][composer] - PHP package manager
+* [Bower][bower] - Front-end package manager
 
 If (or once) you have them all installed, run:
 
@@ -44,13 +43,7 @@ If (or once) you have them all installed, run:
 composer create-project -s dev gourmet/platform [app_name]
 ```
 
-Optionally (but recommended), a virtual machine has been pre-configured using [puphpet][puphpet]. Just run:
-
-```
-vagrant up
-```
-
-> __NOTE:__ Requires a basic knowledge of both [Vagrant][vagrant] and [Puppet][puppet].
+_You might want to check out `[Gourmet/Box][gourmet/box]` if you prefer using a self contained setup._
 
 ## Configure
 
@@ -134,6 +127,7 @@ Copyright (c) 2014, Jad Bitar and licensed under [The MIT License][mit].
 [faker/repo]://github.com/fzaninotto/faker
 [foc/crud/repo]://github.com/friendsofcake/crud
 [gourmet]://github.com/gourmet/gourmet
+[gourmet/box]://github.com/gourmet/box/
 [gourmet/semver]://github.com/gourmet/gourmet/
 [jquery]:http://jquery.com
 [milestones]://github.com/gourmet/platform/issues/milestones

@@ -3,7 +3,7 @@
 A skeleton to quickly cook [gourmet][gourmet] [CakePHP][cakephp] web apps.
 
 > __NOTE:__ Platform is in alpha, [missing some important packages](#TODO) but ready to help
-> you quickly get started with your [CakePHP 3][cakephp] application the _[right way][gourmet]_.
+> you quickly get started with your [CakePHP 3][cakephp] application.
 
 ## Pre-installed packages
 
@@ -126,7 +126,6 @@ Copyright (c) 2014, Jad Bitar and licensed under [The MIT License][mit].
 [debug_kit/repo]://github.com/cakephp/debug_kit
 [faker/repo]://github.com/fzaninotto/faker
 [foc/crud/repo]://github.com/friendsofcake/crud
-[gourmet]://github.com/gourmet/gourmet
 [gourmet/box]://github.com/gourmet/box/
 [gourmet/semver]://github.com/gourmet/semver/
 [jquery]:http://jquery.com

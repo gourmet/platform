@@ -51,11 +51,6 @@
 	, "config": {
 		"preferred-install": "dist"
 	}
-	, "scripts": {
-		"post-install-cmd": [
-			"./src/Console/cake Robo.robot platform:tmp"
-		]
-	}
 	, "extra": {
 		"installer-paths": {
 			"plugin/{$name}": ["type:cakephp-plugin"]

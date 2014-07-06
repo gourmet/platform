@@ -24,7 +24,7 @@
 /**
  * Set the application's debug mode.
  */
-	Cake\Core\Configure::write('debug', read('debug', file_exists(ROOT . DS . '.debug')));
+	Cake\Core\Configure::write('debug', file_exists(ROOT . DS . '.debug'));
 
 /**
  * Set the application's default configurations.

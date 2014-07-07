@@ -15,7 +15,7 @@ Router::scope('/', function($routes) {
 /**
  * ...and connect the rest of 'Pages' controller's urls.
  */
-	$routes->connect('/pages/*', ['controller', => 'pages', 'action' => 'display']);
+	$routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
 
 /**
  * Connect a route for the index action of any controller.

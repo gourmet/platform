@@ -14,7 +14,8 @@ ConnectionManager::config(Hash::merge([
 		'database' => 'app',
 		'prefix' => false,
 		'encoding' => strtolower(str_replace('-', '', read('App.encoding'))),
-		'timezone' => read('App.timezone')
+		'timezone' => read('App.timezone'),
+		'quoteIdentifiers' => false
 	],
 	'test' => [
 		'className' => 'Cake\Database\Connection',
@@ -26,6 +27,7 @@ ConnectionManager::config(Hash::merge([
 		'database' => 'test_app',
 		'prefix' => false,
 		'encoding' => strtolower(str_replace('-', '', read('App.encoding'))),
-		'timezone' => read('App.timezone')
+		'timezone' => read('App.timezone'),
+		'quoteIdentifiers' => false
 	]
 ], consume('Datasources')));

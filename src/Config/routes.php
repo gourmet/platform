@@ -3,7 +3,7 @@
 use Cake\Core\Plugin;
 use Cake\Routing\Router;
 
-Router::scope('/', fnction($routes) {
+Router::scope('/', function($routes) {
 
 /**
  * Here, we are connecting '/' (base path) to controller called 'Pages',

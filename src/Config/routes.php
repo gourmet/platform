@@ -1,29 +1,36 @@
 <?php
 
-use Cake\Core\Configure;
 use Cake\Core\Plugin;
 use Cake\Routing\Router;
+
+Router::scope('/', fnction($routes) {
 
 /**
  * Here, we are connecting '/' (base path) to controller called 'Pages',
  * its action called 'display', and we pass a param to select the view file
  * to use (in this case, /app/View/Pages/home.ctp)...
  */
-Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home'));
+	$routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
 
 /**
  * ...and connect the rest of 'Pages' controller's urls.
  */
-Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
+	$routes->connect('/pages/*', ['controller', => 'pages', 'action' => 'display']);
+
+/**
+ * Connect a route for the index action of any controller.
+ * And a more general catch all route for any action.
+ *
+ * You can remove these routes once you've connected the
+ * routes you want in your application.
+ */
+	$routes->connect('/:controller', ['action' => 'index'], ['routeClass' => 'InflectedRoute']);
+	$routes->connect('/:controller/:action/*', [], ['routeClass' => 'InflectedRoute']);
+
+});
 
 /**
  * Load all plugin routes.  See the Plugin documentation on
  * how to customize the loading of plugin routes.
  */
 Plugin::routes();
-
-/**
- * Load the CakePHP default routes. Only remove this if you do not want to use
- * the built-in default routes.
- */
-require CAKE . 'Config' . DS . 'routes.php';

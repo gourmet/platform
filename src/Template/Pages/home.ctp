@@ -73,7 +73,7 @@ if (empty($settings)) {
 }
 
 try {
-	$connection = ConnectionManager::getDataSource('default');
+	$connection = ConnectionManager::get('default');
 	$connected = $connection->connect();
 } catch (Exception $connectionError) {
 	$connected = false;

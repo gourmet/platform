@@ -51,3 +51,7 @@ modules:
             user: 'root'
             password: 'root'
             dump: tests/_data/dump.sql
+
+# Global extensions.
+extensions:
+    enabled: [FixtureInjector]

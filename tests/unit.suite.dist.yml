@@ -5,4 +5,4 @@
 
 class_name: CodePerson
 modules:
-    enabled: [Asserts, CodeHelper]
+    enabled: [Asserts, CodeHelper, Db]

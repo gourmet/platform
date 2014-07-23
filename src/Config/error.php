@@ -34,7 +34,6 @@ if (php_sapi_name() === 'cli') {
 /**
  * Register error and exception handlers.
  */
-$errorHandler = 'Cake\Error\ErrorHandler';
 (new $errorHandler($errorConfig))->register();
 
 /**

@@ -1,4 +1,4 @@
 <?php
-$this->extend('Layout/default');
+$this->extend('default');
 
 echo $this->fetch('content');

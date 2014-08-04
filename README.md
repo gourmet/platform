@@ -1,6 +1,6 @@
 # Platform for CakePHP 3 Web Application
 
-A skeleton to quickly cook [gourmet][gourmet] [CakePHP][cakephp] web apps.
+A skeleton to quickly cook some _gourmet_ [CakePHP][cakephp] web apps.
 
 > __NOTE:__ Platform is in alpha, [missing some important packages](#TODO) but ready to help
 > you quickly get started with your [CakePHP 3][cakephp] application.

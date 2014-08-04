@@ -127,7 +127,6 @@ Copyright (c) 2014, Jad Bitar and licensed under [The MIT License][mit].
 [faker/repo]://github.com/fzaninotto/faker
 [foc/crud/repo]://github.com/friendsofcake/crud
 [gourmet/box]://github.com/gourmet/box/
-[gourmet/semver]://github.com/gourmet/semver/
 [jquery]:http://jquery.com
 [milestones]://github.com/gourmet/platform/issues/milestones
 [migrations/repo]://github.com/cakedc/migrations

@@ -12,6 +12,7 @@ define('CAKE', CORE_PATH . 'src' . DS);
 
 define('APP_DIR', 'src');
 define('APP', ROOT . DS . APP_DIR . DS);
+define('CONFIG', ROOT . DS . 'config' . DS);
 
 define('WEBROOT_DIR', 'webroot');
 define('WWW_ROOT', ROOT . DS . WEBROOT_DIR . DS);

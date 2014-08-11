@@ -32,12 +32,12 @@
  * All configuration values can be overloaded in `.localconfig` or using
  * environment variables (including `debug`).
  */
-	require APP . 'Config' . DS . 'application.php';
-	require APP . 'Config' . DS . 'paths.php';
-	require APP . 'Config' . DS . 'security.php';
-	require APP . 'Config' . DS . 'acl.php';
-	require APP . 'Config' . DS . 'session.php';
-	require APP . 'Config' . DS . 'dispatcher.php';
+	require CONFIG . 'application.php';
+	require CONFIG . 'paths.php';
+	require CONFIG . 'security.php';
+	require CONFIG . 'acl.php';
+	require CONFIG . 'session.php';
+	require CONFIG . 'dispatcher.php';
 
 /**
  * Local/runtime overload of all configuration values.
@@ -52,16 +52,16 @@
  * All engines' configuration values can be overloaded in `.localconfig`
  * or using environment variables.
  */
-	require APP . 'Config' . DS . 'database.php';
-	require APP . 'Config' . DS . 'error.php';
-	require APP . 'Config' . DS . 'cache.php';
-	require APP . 'Config' . DS . 'email.php';
-	require APP . 'Config' . DS . 'log.php';
+	require CONFIG . 'database.php';
+	require CONFIG . 'error.php';
+	require CONFIG . 'cache.php';
+	require CONFIG . 'email.php';
+	require CONFIG . 'log.php';
 
 /**
  * Load plugins.
  */
-	require APP . 'Config' . DS . 'plugin.php';
+	require CONFIG . 'plugin.php';
 
 /**
  *

@@ -10,6 +10,7 @@ A skeleton to quickly cook some _gourmet_ [CakePHP][cakephp] web apps.
 ### Composer
 
 * [cakephp/cakephp][cakephp/repo] to power the application.
+* [cakephp/debug_kit][debug_kit/repo] - the official CakePHP debugging tool.
 * [friendsofcake/crud][foc/crud/repo] to quickly get things going.
 * [fzaninotto/faker][faker/repo] to generate fixture and seed data.
 * [gourmet/assetic][assetic/repo] to handle asset compression, minification, etc.
@@ -91,8 +92,7 @@ $ export APP_TITLE "Official Name"
 * [ ] Use [gourmet/twitter_bootstrap][twitter_bootstrap/repo] to make CakePHP helpers play well with Twitter Bootstrap.
 * [ ] Use [monolog/monolog][monolog/repo] to handle all types of logging. See [#2033][cakephp/2033].
 * [ ] Use [anahkiasen/rocketeer][rocketeer/repo] to deploy the application.
-* [ ] Use [maximebf/debugbar][debugbar/repo] debugging kit.
-* [ ] Use [cakephp/debug_kit][debug_kit/repo] once it is released for CakePHP 3.
+* [x] Use [cakephp/debug_kit][debug_kit/repo] once it is released for CakePHP 3.
 * [ ] Use [cakedc/migrations][migrations/repo] once it is released for CakePHP 3.
 * [ ] Add link to virtual machine information.
 

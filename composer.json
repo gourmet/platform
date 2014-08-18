@@ -25,6 +25,7 @@
 	, "require": {
 		"php": ">=5.4.19"
 		, "cakephp/cakephp": "3.0.*-dev"
+		, "cakephp/debug_kit": "3.0.*-dev"
 		, "gourmet/assetic": "~0.2.0"
 		, "gourmet/robo": "~0.2.0"
 		, "friendsofcake/crud": "dev-cake3"

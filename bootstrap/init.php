@@ -32,8 +32,3 @@ use Cake\Core\Configure;
 		}
 		unset($httpHost, $s);
 	}
-
-/**
- * Initialize the cake application.
- */
-	App::init();

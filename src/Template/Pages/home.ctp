@@ -4,8 +4,8 @@ use Cake\Cache\Cache;
 use Cake\Core\Configure;
 use Cake\Core\Plugin;
 use Cake\Datasource\ConnectionManager;
+use Cake\Error\Debugger;
 use Cake\Error\NotFoundException;
-use Cake\Utility\Debugger;
 use Cake\Validation\Validation;
 
 if (!Configure::read('debug')):

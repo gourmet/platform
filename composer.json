@@ -52,13 +52,11 @@
 	, "minimum-stability": "dev"
 	, "config": {
 		"preferred-install": "dist"
+		, "bin-dir": "bin"
 	}
 	, "extra": {
 		"installer-paths": {
 			"plugin/{$name}": ["type:cakephp-plugin"]
 		}
 	}
-	, "bin": [
-		"./src/Console/cake"
-	]
 }

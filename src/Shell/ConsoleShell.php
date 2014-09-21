@@ -12,7 +12,7 @@
  * @since         3.0.0
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-namespace App\Console\Command;
+namespace App\Shell;
 
 use Boris\Boris;
 use Cake\Console\ConsoleOptionParser;
@@ -42,9 +42,17 @@ class ConsoleShell extends Shell {
 			$this->err('');
 			return 1;
 		}
+		if (!function_exists('pcntl_signal')) {
+			$this->err('<error>No process control functions.</error>');
+			$this->err('');
+			$this->err('You are missing the pcntl extension, the interactive console requires this extension.');
+			return 2;
+		}
+		$this->out('You can exit with <info>CTRL-D</info>');
 
 		Log::drop('debug');
 		Log::drop('error');
+		$this->_io->setLoggers(false);
 		restore_error_handler();
 		restore_exception_handler();
 
@@ -60,9 +68,9 @@ class ConsoleShell extends Shell {
 	public function getOptionParser() {
 		$parser = new ConsoleOptionParser('console', false);
 		$parser->description(
-			'This shell provides a REPL that you can use to interact' .
-			'with your application in an interactive fashion. You can use' .
-			'it to run adhoc queries with your models, or experiment' .
+			'This shell provides a REPL that you can use to interact ' .
+			'with your application in an interactive fashion. You can use ' .
+			'it to run adhoc queries with your models, or experiment ' .
 			'and explore the features of CakePHP and your application.' .
 			"\n\n" .
 			'You will need to have boris installed for this Shell to work. ' .

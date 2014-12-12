@@ -14,8 +14,8 @@ A skeleton to quickly cook some _gourmet_ [CakePHP][cakephp] web apps.
 * [cakephp/migrations][migrations/repo] - the official CakePHP migrations shell.
 * [friendsofcake/crud][foc/crud/repo] to quickly get things going.
 * [fzaninotto/faker][faker/repo] to generate fixture and seed data.
-* [gourmet/assetic][assetic/repo] to handle asset compression, minification, etc.
 * [gourmet/robo][robo/repo] to run build or other tasks using [Robo][robo].
+* [markstory/asset_compress][asset_compress/repo] to handle asset compression, minification, etc.
 * [mobiledetect/mobiledetectlib][mobiledetect/repo].
 
 ##### Developer mode
@@ -113,7 +113,7 @@ All gourmet packages use [semantic versioning][semver]:
 
 Copyright (c) 2014, Jad Bitar and licensed under [The MIT License][mit].
 
-[assetic/repo]://github.com/gourmet/assetic
+[asset_compress/repo]://github.com/markstory/asset_compress
 [bootstrap]:http://getbootstrap.com
 [boris/repo]://github.com/d11wtq/boris
 [bower]:http://bower.io

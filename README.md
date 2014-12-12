@@ -13,7 +13,7 @@ A skeleton to quickly cook some _gourmet_ [CakePHP][cakephp] web apps.
 * [cakephp/debug_kit][debug_kit/repo] - the official CakePHP debugging tool.
 * [cakephp/migrations][migrations/repo] - the official CakePHP migrations shell.
 * [friendsofcake/crud][foc/crud/repo] to quickly get things going.
-* [fzaninotto/faker][faker/repo] to generate fixture and seed data.
+* [gourmet/faker][faker/repo] to generate fixture and seed data.
 * [gourmet/robo][robo/repo] to run build or other tasks using [Robo][robo].
 * [markstory/asset_compress][asset_compress/repo] to handle asset compression, minification, etc.
 * [mobiledetect/mobiledetectlib][mobiledetect/repo].
@@ -124,7 +124,7 @@ Copyright (c) 2014, Jad Bitar and licensed under [The MIT License][mit].
 [composer]://getcomposer.org/doc/00-intro.md#globally
 [debugbar/repo]://github.com/maximebf/debugbar
 [debug_kit/repo]://github.com/cakephp/debug_kit
-[faker/repo]://github.com/fzaninotto/faker
+[faker/repo]://github.com/gourmet/faker
 [foc/crud/repo]://github.com/friendsofcake/crud
 [gourmet/box]://github.com/gourmet/box/
 [jquery]:http://jquery.com

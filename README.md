@@ -11,6 +11,7 @@ A skeleton to quickly cook some _gourmet_ [CakePHP][cakephp] web apps.
 
 * [cakephp/cakephp][cakephp/repo] to power the application.
 * [cakephp/debug_kit][debug_kit/repo] - the official CakePHP debugging tool.
+* [cakephp/migrations][migrations/repo] - the official CakePHP migrations shell.
 * [friendsofcake/crud][foc/crud/repo] to quickly get things going.
 * [fzaninotto/faker][faker/repo] to generate fixture and seed data.
 * [gourmet/assetic][assetic/repo] to handle asset compression, minification, etc.
@@ -93,7 +94,7 @@ $ export APP_TITLE "Official Name"
 * [ ] Use [monolog/monolog][monolog/repo] to handle all types of logging. See [#2033][cakephp/2033].
 * [ ] Use [anahkiasen/rocketeer][rocketeer/repo] to deploy the application.
 * [x] Use [cakephp/debug_kit][debug_kit/repo] once it is released for CakePHP 3.
-* [ ] Use [cakedc/migrations][migrations/repo] once it is released for CakePHP 3.
+* [x] Use [cakephp/migrations][migrations/repo] once it is released for CakePHP 3.
 * [ ] Add link to virtual machine information.
 
 ## Versioning
@@ -129,7 +130,7 @@ Copyright (c) 2014, Jad Bitar and licensed under [The MIT License][mit].
 [gourmet/box]://github.com/gourmet/box/
 [jquery]:http://jquery.com
 [milestones]://github.com/gourmet/platform/issues/milestones
-[migrations/repo]://github.com/cakedc/migrations
+[migrations/repo]://github.com/cakephp/migrations
 [mit]:http://www.opensource.org/licenses/mit-license.php
 [mobiledetect/repo]://github.com/mobiledetectlib/mobiledetectlib
 [monolog/repo]://github.com/seldaek/monolog

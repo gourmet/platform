@@ -15,7 +15,6 @@ use Symfony\Component\BrowserKit\Request;
 use Symfony\Component\BrowserKit\Response;
 
 class_exists('Cake\TestSuite\ControllerTestCase', true);
-class_exists('Cake\TestSuite\StubControllerFilter', true);
 
 class Client extends BKClient
 {
@@ -54,15 +53,15 @@ class Client extends BKClient
 
 		$plugin = empty($request->params['plugin']) ? '' : Inflector::camelize($request->params['plugin']) . '.';
 
-		$StubFilter = new \Cake\TestSuite\StubControllerFilter();
-		$Dispatcher = DispatcherFactory::create();
-		$Dispatcher->addFilter($StubFilter);
+		$response = new \Cake\Network\Response();
+		$dispatcher = DispatcherFactory::create();
 
-		$StubFilter->response = $this->getMock('Cake\Network\Response', array('send', 'stop'));
-		$StubFilter->testController = $this->generate($plugin . Inflector::camelize($request->params['controller']));
-
-		$Dispatcher->dispatch($request, $StubFilter->response);
-		return $StubFilter->testController->response;
+		try {
+			$dispatcher->dispatch($request, $response);
+			return $response;
+		} catch (\Exception $e) {
+			throw $e;
+		}
 	}
 
 	protected function generate($controller)

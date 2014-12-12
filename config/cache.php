@@ -32,7 +32,9 @@ $cacheConfig = Hash::merge([
     'year' => $cacheEngine + ['duration' => '+1 year'],
     'month' => $cacheEngine + ['duration' => '+1 month'],
     'week' => $cacheEngine + ['duration' => '+1 week'],
-    'day' => $cacheEngine + ['duration' => '+1 day']
+    'day' => $cacheEngine + ['duration' => '+1 day'],
+    // required by markstory/asset_compress plugin
+    'asset_compress' => $cacheEngines['file'] + ['duration' => '+999 days', 'path' => CACHE . 'persistent' . DS],
 ], consume('Cache'));
 
 Cache::config($cacheConfig);

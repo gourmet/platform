@@ -17,7 +17,6 @@ A skeleton to quickly cook some _gourmet_ [CakePHP][cakephp] web apps.
 * [gourmet/assetic][assetic/repo] to handle asset compression, minification, etc.
 * [gourmet/robo][robo/repo] to run build or other tasks using [Robo][robo].
 * [mobiledetect/mobiledetectlib][mobiledetect/repo].
-* [robmorgan/phinx][phinx/repo] to run database migrations.
 
 ##### Developer mode
 

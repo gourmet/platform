@@ -30,6 +30,7 @@
 		, "gourmet/faker": "dev-master"
 		, "gourmet/robo": "~0.2.0"
 		, "friendsofcake/crud": "dev-cake3"
+		, "josegonzalez/dotenv": "dev-master"
 		, "markstory/asset_compress": "3.0.*-dev"
 		, "mobiledetect/mobiledetectlib": "~2.0"
 		, "psr/log": "~1.0"

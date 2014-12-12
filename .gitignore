@@ -9,7 +9,7 @@ composer.lock
 
 # Used for sensitive/volatile config
 /.debug
-/.localconfig
+/.env
 
 # Used by Vagrant
 /.vagrant/*

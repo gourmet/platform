@@ -15,6 +15,7 @@ A skeleton to quickly cook some _gourmet_ [CakePHP][cakephp] web apps.
 * [friendsofcake/crud][foc/crud/repo] to quickly get things going.
 * [gourmet/faker][faker/repo] to generate fixture and seed data.
 * [gourmet/robo][robo/repo] to run build or other tasks using [Robo][robo].
+* [josegonzalez/dotenv][dotenv/repo] to easily manage environment variables.
 * [markstory/asset_compress][asset_compress/repo] to handle asset compression, minification, etc.
 * [mobiledetect/mobiledetectlib][mobiledetect/repo].
 
@@ -124,6 +125,7 @@ Copyright (c) 2014, Jad Bitar and licensed under [The MIT License][mit].
 [composer]://getcomposer.org/doc/00-intro.md#globally
 [debugbar/repo]://github.com/maximebf/debugbar
 [debug_kit/repo]://github.com/cakephp/debug_kit
+[dotenv/repo]://github.com/josegonzalez/php-dotenv
 [faker/repo]://github.com/gourmet/faker
 [foc/crud/repo]://github.com/friendsofcake/crud
 [gourmet/box]://github.com/gourmet/box/

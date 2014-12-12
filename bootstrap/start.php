@@ -15,6 +15,22 @@
  */
 	require 'autoload.php';
 
+	try {
+		$dotenv = (new josegonzalez\Dotenv\Loader(ROOT . '.env'))
+		->parse()
+		->expect(
+			'DB1_HOST'
+			, 'DB1_USER'
+			, 'DB1_PASS'
+			, 'DB1_NAME'
+		)
+		->toEnv();
+	} catch (RuntimeException $e) {
+		die($e->getMessage());
+	} catch (Exception $e) {
+		// do nothing (env vars setup on server)
+	}
+
 /**
  * Define extra functions.
  */
@@ -28,9 +44,6 @@
 
 /**
  * Set the application's default configurations.
- *
- * All configuration values can be overloaded in `.localconfig` or using
- * environment variables (including `debug`).
  */
 	require CONFIG . 'application.php';
 	require CONFIG . 'paths.php';
@@ -40,17 +53,7 @@
 	require CONFIG . 'dispatcher.php';
 
 /**
- * Local/runtime overload of all configuration values.
- */
-	if (file_exists(ROOT . DS . '.localconfig')) {
-		require ROOT . DS . '.localconfig';
-	}
-
-/**
  * Engines configuration.
- *
- * All engines' configuration values can be overloaded in `.localconfig`
- * or using environment variables.
  */
 	require CONFIG . 'database.php';
 	require CONFIG . 'error.php';

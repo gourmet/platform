@@ -90,7 +90,7 @@ touch .debug
 * [ ] Use [anahkiasen/rocketeer][rocketeer/repo] to deploy the application.
 * [x] Use [cakephp/debug_kit][debug_kit/repo] once it is released for CakePHP 3.
 * [x] Use [cakephp/migrations][migrations/repo] once it is released for CakePHP 3.
-* [ ] Add link to virtual machine information.
+* [x] Add link to virtual machine information.
 
 ## Versioning
 

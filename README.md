@@ -49,44 +49,32 @@ _You might want to check out `[Gourmet/Box][gourmet/box]` if you prefer using a 
 
 ## Configure
 
-Look in `src/Config` for all the configuration files. The default configuration works
-good, but feel free to modify it to better suit your needs.
+Platform's configuration is broken into 'scopes':
 
-### Developer mode
+* application
+* asset_compress
+* cache
+* database
+* dispatcher
+* email
+* error
+* log
+* paths
+* plugin
+* routes
+* security
+* session
+
+This makes configuration a little more organized (compared to a single bloated file) and easily accessible using your
+IDE's fuzzy finder (try typing 'log' in the fuzzy finder, the first matching file should the log config file).
+
+### Quick Tips
 
 To enable `debug` mode without having to modify any file:
 
 ```
 touch .debug
 ```
-
----
-
-To run arbitrary code during bootstrap in current environment (i.e. overload
-configuration values):
-
-```
-`$EDITOR .localconfig`
-```
-
-Another solution for overloading configuration values, environment variables (good
-for remote environments, i.e. production):
-
-```
-# in apache
-<VirtualHost hostname:80>
-  ...
-  SetEnv DEBUG 0
-  SetEnv APP_TITLE "Official Name"
-  ...
-</VirtualHost>
-
-# in the terminal
-$ export DEBUG=0
-$ export APP_TITLE "Official Name"
-```
-
-> __Note:__ All configuration values can be overloaded.
 
 ## TODO
 

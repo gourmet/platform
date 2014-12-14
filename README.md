@@ -87,10 +87,11 @@ touch .debug
 
 * [ ] Use [gourmet/twitter_bootstrap][twitter_bootstrap/repo] to make CakePHP helpers play well with Twitter Bootstrap.
 * [ ] Use [monolog/monolog][monolog/repo] to handle all types of logging. See [#2033][cakephp/2033].
-* [ ] Use [anahkiasen/rocketeer][rocketeer/repo] to deploy the application.
 * [x] Use [cakephp/debug_kit][debug_kit/repo] once it is released for CakePHP 3.
 * [x] Use [cakephp/migrations][migrations/repo] once it is released for CakePHP 3.
 * [x] Add link to virtual machine information.
+* [ ] Add link to [capcake][capcake/repo] deployments.
+* [ ] Add link to [rocketeer][rocketeer/repo] deployments.
 
 ## Versioning
 
@@ -116,6 +117,7 @@ Copyright (c) 2014, Jad Bitar and licensed under [The MIT License][mit].
 [cakephp]:http://cakephp.org
 [cakephp/2033]://github.com/cakephp/cakephp/issues/2033
 [cakephp/repo]://github.com/cakephp/cakephp
+[capcake/repo]://github.com/jadb/capcake
 [codeception/repo]://github.com/codeception/codeception
 [composer]://getcomposer.org/doc/00-intro.md#globally
 [debugbar/repo]://github.com/maximebf/debugbar

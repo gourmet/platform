@@ -95,7 +95,7 @@ touch .debug
 
 ## Versioning
 
-All gourmet packages use [semantic versioning][semver]:
+Platform uses [semantic versioning][semver]:
 
 > Given a version number MAJOR.MINOR.PATCH, increment the:
 >

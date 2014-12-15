@@ -16,7 +16,7 @@
 	require 'autoload.php';
 
 	try {
-		$dotenv = (new josegonzalez\Dotenv\Loader(ROOT . '.env'))
+		$dotenv = (new josegonzalez\Dotenv\Loader(ROOT . DS . '.env'))
 		->parse()
 		->expect(
 			'DB1_HOST'

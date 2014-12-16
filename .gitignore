@@ -2,7 +2,6 @@
 /bower_components/*
 /plugin/*
 /vendor/*
-composer.lock
 
 # Used for temporary storage
 /tmp/*

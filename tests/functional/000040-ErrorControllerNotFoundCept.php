@@ -4,4 +4,4 @@ namespace App\Test;
 
 $I = new TestPerson($scenario);
 $I->wantTo('view an unexisting page');
-$I->expectAnExceptionOnPage('/an_unexisting_page', '\Cake\Controller\Error\MissingControllerException');
+$I->expectAnExceptionOnPage('/an_unexisting_page', '\Cake\Routing\Exception\MissingControllerException');

@@ -1,6 +1,6 @@
 # Used by package managers
 /bower_components/*
-/plugin/*
+/plugins/*
 /vendor/*
 
 # Used for temporary storage

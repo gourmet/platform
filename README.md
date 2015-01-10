@@ -108,7 +108,7 @@ Platform uses [semantic versioning][semver]:
 
 ## License
 
-Copyright (c) 2014, Jad Bitar and licensed under [The MIT License][mit].
+Copyright (c) 2015, Jad Bitar and licensed under [The MIT License][mit].
 
 [asset_compress/repo]://github.com/markstory/asset_compress
 [bootstrap]:http://getbootstrap.com

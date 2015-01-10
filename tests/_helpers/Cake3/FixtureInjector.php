@@ -5,7 +5,8 @@ use Codeception\Event\SuiteEvent;
 use Codeception\Event\TestEvent;
 use Codeception\Platform\Extension;
 
-class FixtureInjector extends Extension {
+class FixtureInjector extends Extension
+{
 
     public static $events = [
         'suite.before' => 'startTestSuite',
@@ -18,24 +19,28 @@ class FixtureInjector extends Extension {
 
     protected $_first;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->_fixtureManager = new FixtureManager();
         $this->_fixtureManager->shutdown();
     }
 
-    public function startTestSuite(SuiteEvent $event) {
+    public function startTestSuite(SuiteEvent $event)
+    {
         if (empty($this->_first)) {
             $this->_first = $event->getSuite();
         }
     }
 
-    public function endTestSuite(SuiteEvent $event) {
+    public function endTestSuite(SuiteEvent $event)
+    {
         if ($this->_first === $event->getSuite()) {
             $this->_fixtureManager->shutdown();
         }
     }
 
-    public function startTest(TestEvent $event) {
+    public function startTest(TestEvent $event)
+    {
         $event->getTest()->fixtureManager = $this->_fixtureManager;
         if ($event->getTest() instanceof PHPUnit_Framework_TestCase) {
             $this->_fixtureManager->fixturize($event->getTest());
@@ -43,10 +48,10 @@ class FixtureInjector extends Extension {
         }
     }
 
-    public function endTest(TestEvent $event, $time) {
+    public function endTest(TestEvent $event, $time)
+    {
         if ($event->getTest() instanceof PHPUnit_Framework_TestCase) {
             $this->_fixtureManager->unload($event->getTest());
         }
     }
-
 }

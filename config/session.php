@@ -45,5 +45,5 @@ use Cake\Core\Configure;
  */
 
 Configure::write('Session', [
-	'defaults' => 'php',
+    'defaults' => 'php',
 ]);

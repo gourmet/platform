@@ -17,7 +17,6 @@ changes, some pre-installed/configured libraries/plugins and some 'best practice
 ### Composer
 
 * [cakephp/cakephp][cakephp/repo] to power the application.
-* [cakephp/debug_kit][debug_kit/repo] - the official CakePHP debugging tool.
 * [cakephp/migrations][migrations/repo] - the official CakePHP migrations shell.
 * [friendsofcake/crud][foc/crud/repo] to quickly get things going.
 * [gourmet/faker][faker/repo] to generate fixture and seed data.
@@ -28,6 +27,7 @@ changes, some pre-installed/configured libraries/plugins and some 'best practice
 
 ##### Developer mode
 
+* [cakephp/debug_kit][debug_kit/repo] - the official CakePHP debugging tool.
 * [codeception/codeception][codeception/repo] to run acceptance, functional and unit tests ([sebastianbergmann/phpunit][phpunit/repo] included).
 * [codeception/specify][specify/repo] BDD code blocks for PHPUnit and Codeception.
 * [codeception/verify][verify/repo] BDD assertion library for PHPUnit.
@@ -39,20 +39,21 @@ changes, some pre-installed/configured libraries/plugins and some 'best practice
 * [twbs/bootstrap][bootstrap]
 * [jquery/jquery][jquery]
 
+### Node
+
+* [Bower][bower] - Front-end package manager
+
 ## Get started
 
 It is assumed that you have the following installed globally:
 
 * [Composer][composer] - PHP package manager
-* [Bower][bower] - Front-end package manager
 
 If (or once) you have them all installed, run:
 
 ```
 composer create-project -s dev gourmet/platform [app_name]
 ```
-
-_You might want to check out `[Gourmet/Box][gourmet/box]` if you prefer using a self contained setup._
 
 ## Configure
 
@@ -72,8 +73,12 @@ Platform's configuration is broken into 'scopes':
 * security
 * session
 
-This makes configuration a little more organized (compared to a single bloated file) and easily accessible using your
-IDE's fuzzy finder (try typing 'log' in the fuzzy finder, the first matching file should the log config file).
+This makes configuration a little more organized (compared to a single bloated file) and easily accessible
+using your IDE's fuzzy finder (try typing 'log' in the fuzzy finder, the first matching file should the log
+config file).
+
+_To reduce the # of requires, a build process should concatenate all these and use the resulting file in
+production. It has yet to be implemented._
 
 ### Quick Tips
 
@@ -82,6 +87,8 @@ To enable `debug` mode without having to modify any file:
 ```
 touch .debug
 ```
+
+or use the `DEBUG` environment variable.
 
 ## TODO
 

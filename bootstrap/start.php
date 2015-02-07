@@ -40,7 +40,7 @@ require 'functions.php';
 /**
  * Set the application's debug mode.
  */
-Cake\Core\Configure::write('debug', file_exists(ROOT . DS . '.debug'));
+Cake\Core\Configure::write('debug', file_exists(ROOT . DS . '.debug') or env('DEBUG'));
 
 /**
  * Set the application's default configurations.

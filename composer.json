@@ -25,7 +25,6 @@
     , "require": {
         "php": ">=5.5.11"
         , "cakephp/cakephp": "3.0.*-dev"
-        , "cakephp/debug_kit": "3.0.*-dev"
         , "cakephp/migrations": "dev-master"
         , "cakephp/plugin-installer": "*"
         , "gourmet/faker": "dev-master"
@@ -37,7 +36,8 @@
         , "psr/log": "~1.0"
     }
     , "require-dev": {
-        "codeception/codeception": "~2.0"
+        "cakephp/debug_kit": "3.0.*-dev"
+        , "codeception/codeception": "~2.0"
         , "codeception/specify": "~0.3"
         , "codeception/verify": "~0.2"
         , "d11wtq/boris": "~1.0.0"

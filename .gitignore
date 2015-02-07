@@ -5,6 +5,7 @@
 /vendor/*
 
 # Used for temporary storage
+/logs/*
 /tmp/*
 
 # Used for sensitive/volatile config

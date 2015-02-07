@@ -18,7 +18,7 @@ define('WEBROOT_DIR', 'webroot');
 define('WWW_ROOT', ROOT . DS . WEBROOT_DIR . DS);
 
 define('TMP', ROOT . DS . 'tmp' . DS);
-define('LOGS', TMP . 'logs' . DS);
+define('LOGS', ROOT . DS . 'logs' . DS);
 define('CACHE', TMP . 'cache' . DS);
 
 define('TESTS', ROOT . DS . 'Test' . DS);

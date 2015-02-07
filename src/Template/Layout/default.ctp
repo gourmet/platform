@@ -3,27 +3,27 @@
  * Default `html` block.
  */
 if (!$this->fetch('html')) {
-	$this->start('html');
-	printf('<html lang="%s" class="no-js">', read('App.language'));
-	$this->end();
+    $this->start('html');
+    printf('<html lang="%s" class="no-js">', read('App.language'));
+    $this->end();
 }
 
 /**
  * Default `title` block.
  */
 if (!$this->fetch('title')) {
-	$this->start('title');
-	echo read('App.title', env('HTTP_HOST'));
-	$this->end();
+    $this->start('title');
+    echo read('App.title', env('HTTP_HOST'));
+    $this->end();
 }
 
 /**
  * Default `footer` block.
  */
 if (!$this->fetch('footer')) {
-	$this->start('footer');
-	printf('&copy;%s %s', date('Y'), read('App.title', env('HTTP_HOST')));
-	$this->end();
+    $this->start('footer');
+    printf('&copy;%s %s', date('Y'), read('App.title', env('HTTP_HOST')));
+    $this->end();
 }
 
 /**
@@ -31,9 +31,9 @@ if (!$this->fetch('footer')) {
  */
 $this->prepend('bodyAttributes', ' class="' . implode(' ', array($this->request->controller, $this->request->action)) . '" ');
 if (!$this->fetch('body')) {
-	$this->start('body');
-	echo '<body' . $this->fetch('bodyAttributes') . '>';
-	$this->end();
+    $this->start('body');
+    echo '<body' . $this->fetch('bodyAttributes') . '>';
+    $this->end();
 }
 
 /**
@@ -64,29 +64,29 @@ HTML;
 
 <?= $this->fetch('html'); ?>
 
-	<head>
+    <head>
 
-		<?= $this->Html->charset(); ?>
+        <?= $this->Html->charset(); ?>
 
-		<title><?= $this->fetch('title'); ?></title>
+        <title><?= $this->fetch('title'); ?></title>
 
-		<?= $this->fetch('meta'); ?>
-		<?= $this->fetch('css'); ?>
+        <?= $this->fetch('meta'); ?>
+        <?= $this->fetch('css'); ?>
 
-	</head>
+    </head>
 
-	<?= $this->fetch('body'); ?>
+    <?= $this->fetch('body'); ?>
 
-		<?= $this->fetch('content'); ?>
+        <?= $this->fetch('content'); ?>
 
-		<footer id="footer" class="footer">
+        <footer id="footer" class="footer">
 
-			<?= $this->fetch('footer'); ?>
+            <?= $this->fetch('footer'); ?>
 
-		</footer>
+        </footer>
 
-		<?= $this->fetch('script'); ?>
+        <?= $this->fetch('script'); ?>
 
-	</body>
+    </body>
 
 </html>

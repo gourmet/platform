@@ -1,0 +1,6 @@
+{
+    "name": "platform",
+    "dependencies": {
+        "bower": "^1.3.12"
+    }
+}

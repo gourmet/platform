@@ -36,6 +36,7 @@
         "psr/log": "~1.0"
     },
     "require-dev": {
+        "cakephp/bake": "dev-master",
         "cakephp/debug_kit": "3.0.*-dev",
         "codeception/codeception": "~2.0",
         "codeception/specify": "~0.3",

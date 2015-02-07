@@ -27,6 +27,7 @@ changes, some pre-installed/configured libraries/plugins and some 'best practice
 
 ##### Developer mode
 
+* [cakephp/bake][bake/repo] - the official CakePHP bake tool.
 * [cakephp/debug_kit][debug_kit/repo] - the official CakePHP debugging tool.
 * [codeception/codeception][codeception/repo] to run acceptance, functional and unit tests ([sebastianbergmann/phpunit][phpunit/repo] included).
 * [codeception/specify][specify/repo] BDD code blocks for PHPUnit and Codeception.
@@ -118,6 +119,7 @@ Platform uses [semantic versioning][semver]:
 Copyright (c) 2015, Jad Bitar and licensed under [The MIT License][mit].
 
 [asset_compress/repo]://github.com/markstory/asset_compress
+[bake/repo]://github.com/cakephp/bake
 [bootstrap]:http://getbootstrap.com
 [boris/repo]://github.com/d11wtq/boris
 [bower]:http://bower.io

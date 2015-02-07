@@ -20,3 +20,13 @@ if (Configure::read('debug')) {
     } catch (MissingPluginException $e) {
     }
 }
+
+/**
+ * If using the CLI, try loading Bake.
+ */
+if (php_sapi_name() === 'cli') {
+    try {
+        Plugin::load('Bake');
+    } catch (MissingPluginException $e) {
+    }
+}

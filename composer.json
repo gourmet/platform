@@ -23,7 +23,7 @@
         , "source": "http://github.com/gourmet/platform"
     }
     , "require": {
-        "php": ">=5.4.19"
+        "php": ">=5.5.11"
         , "cakephp/cakephp": "3.0.*-dev"
         , "cakephp/debug_kit": "3.0.*-dev"
         , "cakephp/migrations": "dev-master"

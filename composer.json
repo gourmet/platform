@@ -27,6 +27,7 @@
         , "cakephp/cakephp": "3.0.*-dev"
         , "cakephp/debug_kit": "3.0.*-dev"
         , "cakephp/migrations": "dev-master"
+        , "cakephp/plugin-installer": "*"
         , "gourmet/faker": "dev-master"
         , "gourmet/robo": "~0.2.0"
         , "friendsofcake/crud": "dev-cake3"
@@ -53,5 +54,8 @@
     , "minimum-stability": "dev"
     , "config": {
         "preferred-install": "dist"
+    }
+    , "scripts": {
+        "post-autoload-dump": "Cake\\Composer\\Installer\\PluginInstaller::postAutoloadDump"
     }
 }

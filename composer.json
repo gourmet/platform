@@ -48,6 +48,10 @@
         "psr-4": {
             "App\\": "src",
             "App\\Build\\": "build",
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
             "App\\Test\\": "tests"
         }
     },

@@ -37,8 +37,8 @@
     },
     "require-dev": {
         "cakephp/bake": "dev-master",
+        "cakephp/codeception": "dev-master",
         "cakephp/debug_kit": "3.0.*-dev",
-        "codeception/codeception": "~2.0",
         "codeception/specify": "~0.3",
         "codeception/verify": "~0.2",
         "d11wtq/boris": "~1.0.0",
@@ -48,8 +48,7 @@
         "psr-4": {
             "App\\": "src",
             "App\\Build\\": "build",
-            "App\\Test\\": "tests",
-            "App\\Test\\Codeception\\Module\\": "tests/_helpers"
+            "App\\Test\\": "tests"
         }
     },
     "minimum-stability": "dev",
@@ -57,6 +56,9 @@
         "preferred-install": "dist"
     },
     "scripts": {
-        "post-autoload-dump": "Cake\\Composer\\Installer\\PluginInstaller::postAutoloadDump"
+        "post-autoload-dump": [
+            "Cake\\Composer\\Installer\\PluginInstaller::postAutoloadDump",
+            "Cake\\Codeception\\Console\\Installer::postAutoloadDump"
+        ]
     }
 }

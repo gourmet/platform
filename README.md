@@ -28,8 +28,8 @@ changes, some pre-installed/configured libraries/plugins and some 'best practice
 ##### Developer mode
 
 * [cakephp/bake][bake/repo] - the official CakePHP bake tool.
+* [cakephp/codeception][codeception/repo] to run acceptance, functional and unit tests ([sebastianbergmann/phpunit][phpunit/repo] included).
 * [cakephp/debug_kit][debug_kit/repo] - the official CakePHP debugging tool.
-* [codeception/codeception][codeception/repo] to run acceptance, functional and unit tests ([sebastianbergmann/phpunit][phpunit/repo] included).
 * [codeception/specify][specify/repo] BDD code blocks for PHPUnit and Codeception.
 * [codeception/verify][verify/repo] BDD assertion library for PHPUnit.
 * [d11wtq/boris][boris/repo]
@@ -127,7 +127,7 @@ Copyright (c) 2015, Jad Bitar and licensed under [The MIT License][mit].
 [cakephp/2033]://github.com/cakephp/cakephp/issues/2033
 [cakephp/repo]://github.com/cakephp/cakephp
 [capcake/repo]://github.com/jadb/capcake
-[codeception/repo]://github.com/codeception/codeception
+[codeception/repo]://github.com/cakephp/codeception
 [composer]://getcomposer.org/doc/00-intro.md#globally
 [debugbar/repo]://github.com/maximebf/debugbar
 [debug_kit/repo]://github.com/cakephp/debug_kit

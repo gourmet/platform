@@ -1,7 +1,6 @@
 {
     "name": "gourmet/platform",
     "description": "Platform for CakePHP 3 web applications",
-    "version": "0.0.0",
     "type": "project",
     "keywords": [
         "cakephp",

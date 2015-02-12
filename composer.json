@@ -36,6 +36,7 @@
     },
     "require-dev": {
         "cakephp/bake": "dev-master",
+        "cakephp/cakephp-codesniffer": "2.*",
         "cakephp/codeception": "dev-master",
         "cakephp/debug_kit": "3.0.*-dev",
         "codeception/specify": "~0.3",

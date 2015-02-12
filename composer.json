@@ -27,7 +27,7 @@
         "cakephp/migrations": "dev-master",
         "cakephp/plugin-installer": "*",
         "gourmet/faker": "dev-master",
-        "gourmet/robo": "~0.2.0",
+        "gourmet/robo": "dev-master",
         "friendsofcake/crud": "dev-cake3",
         "josegonzalez/dotenv": "dev-master",
         "markstory/asset_compress": "3.0.*-dev",
@@ -41,7 +41,7 @@
         "codeception/specify": "~0.3",
         "codeception/verify": "~0.2",
         "d11wtq/boris": "~1.0.0",
-        "gourmet/whoops": "~0.1.0"
+        "gourmet/whoops": "dev-master"
     },
     "autoload": {
         "psr-4": {

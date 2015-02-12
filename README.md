@@ -29,7 +29,7 @@ changes, some pre-installed/configured libraries/plugins and some 'best practice
 
 * [cakephp/bake][bake/repo] - the official CakePHP bake tool.
 * [cakephp/cakephp-codesniffer][codesniffer/repo] - the official CakePHP code standard sniffs.
-* [cakephp/codeception][codeception/repo] to run acceptance, functional and unit tests ([sebastianbergmann/phpunit][phpunit/repo] included).
+* [cakephp/codeception][codeception/repo] the official CakePHP module for [Codeception][codeception]
 * [cakephp/debug_kit][debug_kit/repo] - the official CakePHP debugging tool.
 * [codeception/specify][specify/repo] BDD code blocks for PHPUnit and Codeception.
 * [codeception/verify][verify/repo] BDD assertion library for PHPUnit.
@@ -128,6 +128,7 @@ Copyright (c) 2015, Jad Bitar and licensed under [The MIT License][mit].
 [cakephp/2033]://github.com/cakephp/cakephp/issues/2033
 [cakephp/repo]://github.com/cakephp/cakephp
 [capcake/repo]://github.com/jadb/capcake
+[codeception]:http://codeception.com
 [codeception/repo]://github.com/cakephp/codeception
 [codesniffer/repo]://github.com/cakephp/cakephp-codesniffer
 [composer]://getcomposer.org/doc/00-intro.md#globally

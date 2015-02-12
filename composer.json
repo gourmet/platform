@@ -59,6 +59,9 @@
         "preferred-install": "dist"
     },
     "scripts": {
+        "post-install-cmd": [
+            "vendor/bin/codecept build"
+        ],
         "post-autoload-dump": [
             "Cake\\Composer\\Installer\\PluginInstaller::postAutoloadDump",
             "Cake\\Codeception\\Console\\Installer::postAutoloadDump"

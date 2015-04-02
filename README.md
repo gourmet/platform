@@ -10,8 +10,9 @@ A skeleton to quickly cook some _gourmet_ [CakePHP][cakephp] web apps.
 
 Put simply, the official app skeleton is very basic (and rightfully so).
 
-Platform, while replicating the official app skeleton as much as possible, distinguishes itself by a few structural
-changes, some pre-installed/configured libraries/plugins and some 'best practices'.
+Platform, while replicating the official app skeleton as much as possible,
+distinguishes itself by a few structural changes, some pre-installed/configured
+libraries/plugins and some 'best practices'.
 
 ## Pre-installed packages
 
@@ -23,19 +24,23 @@ changes, some pre-installed/configured libraries/plugins and some 'best practice
 * [gourmet/faker][faker/repo] to generate fixture and seed data.
 * [gourmet/robo][robo/repo] to run build or other tasks using [Robo][robo].
 * [josegonzalez/dotenv][dotenv/repo] to easily manage environment variables.
-* [markstory/asset_compress][asset_compress/repo] to handle asset compression, minification, etc.
+* [markstory/asset_compress][asset_compress/repo] to handle asset compression,
+minification, etc.
 * [mobiledetect/mobiledetectlib][mobiledetect/repo].
 
 ##### Developer mode
 
 * [cakephp/bake][bake/repo] - the official CakePHP bake tool.
-* [cakephp/cakephp-codesniffer][codesniffer/repo] - the official CakePHP code standard sniffs.
-* [cakephp/codeception][codeception/repo] the official CakePHP module for [Codeception][codeception]
+* [cakephp/cakephp-codesniffer][codesniffer/repo] - the official CakePHP code
+standard sniffs.
+* [cakephp/codeception][codeception/repo] the official CakePHP module for
+[Codeception][codeception]
 * [cakephp/debug_kit][debug_kit/repo] - the official CakePHP debugging tool.
-* [codeception/specify][specify/repo] BDD code blocks for PHPUnit and Codeception.
+* [codeception/specify][specify/repo] BDD code blocks for PHPUnit & Codeception.
 * [codeception/verify][verify/repo] BDD assertion library for PHPUnit.
 * [d11wtq/boris][boris/repo]
-* [gourmet/whoops][whoops/repo] to beautify errors and exceptions (only in debug mode)
+* [gourmet/whoops][whoops/repo] to beautify errors and exceptions (only in debug
+mode).
 
 ### Bower
 
@@ -76,12 +81,12 @@ Platform's configuration is broken into 'scopes':
 * security
 * session
 
-This makes configuration a little more organized (compared to a single bloated file) and easily accessible
-using your IDE's fuzzy finder (try typing 'log' in the fuzzy finder, the first matching file should the log
-config file).
+This makes configuration a little more organized (compared to a single bloated
+file) and easily accessible using your IDE's fuzzy finder (try typing 'log' in
+the fuzzy finder, the first matching file should the log config file).
 
-_To reduce the # of requires, a build process should concatenate all these and use the resulting file in
-production. It has yet to be implemented._
+_To reduce the # of requires, a build process should concatenate all these and
+use the resulting file in production. It has yet to be implemented._
 
 ### Quick Tips
 
@@ -95,11 +100,10 @@ or use the `DEBUG` environment variable.
 
 ## TODO
 
-* [ ] Use [friendsofcake/twitter_bootstrap][twitter_bootstrap/repo] to make CakePHP helpers play well with Twitter Bootstrap.
-* [ ] Use [monolog/monolog][monolog/repo] to handle all types of logging. See [#2033][cakephp/2033].
-* [x] Use [cakephp/debug_kit][debug_kit/repo] once it is released for CakePHP 3.
-* [x] Use [cakephp/migrations][migrations/repo] once it is released for CakePHP 3.
-* [x] Add link to virtual machine information.
+* [ ] Use [friendsofcake/twitter_bootstrap][twitter_bootstrap/repo] to make
+CakePHP helpers play well with Twitter Bootstrap.
+* [ ] Use [monolog/monolog][monolog/repo] to handle all types of logging.
+See [#2033][cakephp/2033].
 * [ ] Add link to [capcake][capcake/repo] deployments.
 * [ ] Add link to [rocketeer][rocketeer/repo] deployments.
 
@@ -110,11 +114,12 @@ Platform uses [semantic versioning][semver]:
 > Given a version number MAJOR.MINOR.PATCH, increment the:
 >
 > - MAJOR version when you make incompatible API changes,
-> - MINOR version when you add functionality in a backwards-compatible manner, and
+> - MINOR version when you add functionality in a backwards-compatible manner,
+> and
 > - PATCH version when you make backwards-compatible bug fixes.
 >
-> Additional labels for pre-release and build metadata are available as extensions to the
-> MAJOR.MINOR.PATCH format.
+> Additional labels for pre-release and build metadata are available as
+> extensions to the MAJOR.MINOR.PATCH format.
 
 ## License
 

@@ -41,7 +41,7 @@
         "cakephp/debug_kit": "~3.0",
         "codeception/specify": "~0.3",
         "codeception/verify": "~0.2",
-        "d11wtq/boris": "~1.0.0",
+        "psy/psysh": "@stable",
         "gourmet/whoops": "~1.0"
     },
     "autoload": {

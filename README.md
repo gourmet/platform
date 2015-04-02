@@ -2,8 +2,9 @@
 
 A skeleton to quickly cook some _gourmet_ [CakePHP][cakephp] web apps.
 
-> __NOTE:__ Platform is in alpha, [missing some important packages](#TODO) but ready to help
-> you quickly get started with your [CakePHP 3][cakephp] application.
+> __NOTE:__ Platform is in beta, still [missing a couple more packages](#TODO)
+> but ready to help you quickly get started with your [CakePHP 3][cakephp]
+> application.
 
 ## But Why?
 
@@ -94,7 +95,7 @@ or use the `DEBUG` environment variable.
 
 ## TODO
 
-* [ ] Use [gourmet/twitter_bootstrap][twitter_bootstrap/repo] to make CakePHP helpers play well with Twitter Bootstrap.
+* [ ] Use [friendsofcake/twitter_bootstrap][twitter_bootstrap/repo] to make CakePHP helpers play well with Twitter Bootstrap.
 * [ ] Use [monolog/monolog][monolog/repo] to handle all types of logging. See [#2033][cakephp/2033].
 * [x] Use [cakephp/debug_kit][debug_kit/repo] once it is released for CakePHP 3.
 * [x] Use [cakephp/migrations][migrations/repo] once it is released for CakePHP 3.
@@ -153,7 +154,7 @@ Copyright (c) 2015, Jad Bitar and licensed under [The MIT License][mit].
 [rocketeer/repo]://github.com/anahkiasen/rocketeer
 [semver]:http://semver.org
 [specify/repo]://github.com/codeception/specify
-[twitter_bootstrap/repo]://github.com/gourmet/twitter_bootstrap
+[twitter_bootstrap/repo]://github.com/friendsofcake/twitter_bootstrap
 [vagrant]:http://vagrantup.com
 [verify/repo]://github.com/codeception/verify
 [whoops/repo]://github.com/gourmet/whoops

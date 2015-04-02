@@ -5,7 +5,7 @@ use Cake\Utility\Hash;
 /**
  * Default error configuration.
  */
-$errorConfig = consume('Error', []) + [
+$errorConfig = read('Error', []) + [
     'errorLevel' => E_ALL & ~E_DEPRECATED,
     'exceptionRenderer' => 'Cake\Error\ExceptionRenderer',
     'skipLog' => [],

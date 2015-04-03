@@ -5,6 +5,8 @@ use Cake\Core\Configure;
 /**
  * Configure basic information about the application.
  *
+ * - title - The default TITLE to use in HTML and footer.
+ * - author - The name to show in the author META.
  * - namespace - The namespace to find app classes under.
  * - encoding - The encoding used for HTML + database connections.
  * - timezone -

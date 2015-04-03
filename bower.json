@@ -1,5 +1,5 @@
 {
-    "name": "gourmet/platform",
+    "name": "platform",
     "dependencies": {
         "bootstrap": "~3.1.1",
         "jquery": "~2.1.0"

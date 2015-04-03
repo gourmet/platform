@@ -81,9 +81,9 @@ Platform's configuration is broken into 'scopes':
 * security
 * session
 
-This makes configuration a little more organized (compared to a single bloated
-file) and easily accessible using your IDE's fuzzy finder (try typing 'log' in
-the fuzzy finder, the first matching file should the log config file).
+This makes configuration a little more organized (compared to a single file)
+and easily accessible using your IDE's fuzzy finder (try typing 'log' in the
+fuzzy finder, the first matching file should the log config file).
 
 _To reduce the # of requires, a build process should concatenate all these and
 use the resulting file in production. It has yet to be implemented._

@@ -1,0 +1,41 @@
+<?php
+namespace App\View;
+
+use Cake\View\View;
+
+class AppView extends View
+{
+    /**
+     * {@inheritdoc}
+     */
+    public function initialize(array $config)
+    {
+        $this->_setupAssetCompress();
+        $this->_setupBootstrapUI();
+    }
+
+    /**
+     * Load the AssetCompress helper.
+     *
+     * @return void
+     */
+    protected function _setupAssetCompress()
+    {
+        $this->loadHelper('AssetCompress.AssetCompress');
+    }
+
+    /**
+     * Load the BootstrapUI helpers.
+     *
+     * @return void
+     */
+    protected function _setupBootstrapUI()
+    {
+        $helpers = ['Html', 'Form'];
+        foreach ($helpers as $helper) {
+            $this->loadHelper($helper, [
+                'className' => 'BootstrapUI.' . $helper,
+            ]);
+        }
+    }
+}

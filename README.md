@@ -20,6 +20,7 @@ libraries/plugins and some 'best practices'.
 
 * [cakephp/cakephp][cakephp/repo] to power the application.
 * [cakephp/migrations][migrations/repo] - the official CakePHP migrations shell.
+* [friendsofcake/bootstrap-ui][foc/bootstrap-ui/repo] to Bootstrap*-ify* CakePHP.
 * [friendsofcake/crud][foc/crud/repo] to quickly get things going.
 * [gourmet/faker][faker/repo] to generate fixture and seed data.
 * [gourmet/robo][robo/repo] to run build or other tasks using [Robo][robo].
@@ -56,12 +57,15 @@ mode).
 It is assumed that you have the following installed globally:
 
 * [Composer][composer] - PHP package manager
+* [NPM][npm] - NodeJS package manager
 
 If (or once) you have them all installed, run:
 
 ```
 composer create-project -s dev gourmet/platform [app_name]
 ```
+
+This will create the *app_name* project folder and download all dependencies.
 
 ## Configure
 
@@ -100,8 +104,6 @@ or use the `DEBUG` environment variable.
 
 ## TODO
 
-* [ ] Use [friendsofcake/twitter_bootstrap][twitter_bootstrap/repo] to make
-CakePHP helpers play well with Twitter Bootstrap.
 * [ ] Use [monolog/monolog][monolog/repo] to handle all types of logging.
 See [#2033][cakephp/2033].
 * [ ] Add link to [capcake][capcake/repo] deployments.
@@ -142,6 +144,7 @@ Copyright (c) 2015, Jad Bitar and licensed under [The MIT License][mit].
 [debug_kit/repo]://github.com/cakephp/debug_kit
 [dotenv/repo]://github.com/josegonzalez/php-dotenv
 [faker/repo]://github.com/gourmet/faker
+[foc/bootstrap-ui/repo]://github.com/friendsofcake/bootstrap-ui
 [foc/crud/repo]://github.com/friendsofcake/crud
 [gourmet/box]://github.com/gourmet/box/
 [jquery]:http://jquery.com
@@ -150,6 +153,7 @@ Copyright (c) 2015, Jad Bitar and licensed under [The MIT License][mit].
 [mit]:http://www.opensource.org/licenses/mit-license.php
 [mobiledetect/repo]://github.com/mobiledetectlib/mobiledetectlib
 [monolog/repo]://github.com/seldaek/monolog
+[npm]:http://npmjs.com
 [phinx/repo]://github.com/robmorgan/phinx
 [phpunit/repo]://github.com/sebastianbergmann/phpunit
 [puppet]:https://puppetlabs.com
@@ -159,7 +163,6 @@ Copyright (c) 2015, Jad Bitar and licensed under [The MIT License][mit].
 [rocketeer/repo]://github.com/anahkiasen/rocketeer
 [semver]:http://semver.org
 [specify/repo]://github.com/codeception/specify
-[twitter_bootstrap/repo]://github.com/friendsofcake/twitter_bootstrap
 [vagrant]:http://vagrantup.com
 [verify/repo]://github.com/codeception/verify
 [whoops/repo]://github.com/gourmet/whoops

@@ -28,6 +28,7 @@
         "cakephp/plugin-installer": "*",
         "gourmet/faker": "~1.0",
         "gourmet/robo": "dev-master",
+        "friendsofcake/bootstrap-ui": "*",
         "friendsofcake/crud": "~3.0",
         "josegonzalez/dotenv": "~0.6",
         "markstory/asset_compress": "~3.0",
@@ -62,7 +63,9 @@
     "scripts": {
         "post-install-cmd": [
             "App\\Console\\Installer::postInstall",
-            "vendor/bin/codecept build"
+            "vendor/bin/codecept build",
+            "npm install",
+            "bower install"
         ],
         "post-autoload-dump": [
             "Cake\\Composer\\Installer\\PluginInstaller::postAutoloadDump"

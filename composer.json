@@ -61,11 +61,11 @@
     },
     "scripts": {
         "post-install-cmd": [
+            "App\\Console\\Installer::postInstall",
             "vendor/bin/codecept build"
         ],
         "post-autoload-dump": [
-            "Cake\\Composer\\Installer\\PluginInstaller::postAutoloadDump",
-            "Cake\\Codeception\\Console\\Installer::postAutoloadDump"
+            "Cake\\Composer\\Installer\\PluginInstaller::postAutoloadDump"
         ]
     }
 }

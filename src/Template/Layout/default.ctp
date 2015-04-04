@@ -12,14 +12,14 @@ echo $this->fetch(
         <?= $this->Html->charset(); ?>
 
         <title>
-            <?= $this->fetch('title', read('App.title', env('HTTP_HOST')); ?>
+            <?= $this->fetch('title', read('App.title', env('HTTP_HOST'))) ?>
         </title>
 
         <meta name="author" content="<?= read('App.author') ?>">
-        <?= echo $this->fetch('meta') ?>
+        <?= $this->fetch('meta') ?>
 
 
-        <?= $this->AssetCompress->css('bootstrap') ?>
+        <?= $this->AssetCompress->css('platform') ?>
         <?= $this->fetch('css'); ?>
         <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
@@ -29,7 +29,7 @@ echo $this->fetch(
 
     </head>
 
-    <?= $this->fetch('body', '<body' . $this->fetch('bodyAttributes') . '>'); ?>
+    <?= $this->fetch('body', '<body' . $this->fetch('bodyAttributes') . '>') ?>
 
         <?= $this->fetch('content'); ?>
 
@@ -47,8 +47,7 @@ echo $this->fetch(
 
         </footer>
 
-        <?= $this->AssetCompress->script('jquery') ?>
-        <?= $this->AssetCompress->script('bootstrap') ?>
+        <?= $this->AssetCompress->script('platform') ?>
         <?= $this->fetch('script'); ?>
 
     </body>

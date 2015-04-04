@@ -30,6 +30,6 @@ if (version_compare(phpversion(), $minVersion, '<')) {
     exit(-1);
 }
 
-include dirname(__DIR__) . '/config/bootstrap.php';
++include dirname(__DIR__) . '/bootstrap/start.php';
 
 exit(Cake\Console\ShellDispatcher::run($argv));

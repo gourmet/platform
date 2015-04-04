@@ -8,7 +8,7 @@ class AppView extends View
     /**
      * {@inheritdoc}
      */
-    public function initialize(array $config)
+    public function initialize()
     {
         $this->_setupAssetCompress();
         $this->_setupBootstrapUI();
@@ -31,7 +31,7 @@ class AppView extends View
      */
     protected function _setupBootstrapUI()
     {
-        $helpers = ['Html', 'Form'];
+        $helpers = ['Flash', 'Form'];
         foreach ($helpers as $helper) {
             $this->loadHelper($helper, [
                 'className' => 'BootstrapUI.' . $helper,

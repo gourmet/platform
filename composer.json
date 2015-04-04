@@ -29,7 +29,7 @@
         "gourmet/faker": "~1.0",
         "gourmet/robo": "dev-master",
         "friendsofcake/bootstrap-ui": "*",
-        "friendsofcake/crud": "~3.0",
+        "friendsofcake/crud": "dev-cake3",
         "josegonzalez/dotenv": "~0.6",
         "markstory/asset_compress": "~3.0",
         "mobiledetect/mobiledetectlib": "~2.0",
@@ -57,6 +57,7 @@
         }
     },
     "minimum-stability": "dev",
+    "prefer-stable": true,
     "config": {
         "preferred-install": "dist"
     },

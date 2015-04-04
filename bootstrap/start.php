@@ -37,6 +37,8 @@ try {
 require CAKE . 'basics.php';
 require 'functions.php';
 
+Cake\Routing\Router::reload();
+
 /**
  * Set the application's debug mode.
  */

@@ -37,8 +37,6 @@ class Installer
 
         $rootDir = dirname(dirname(__DIR__));
 
-        static::createAppConfig($rootDir, $io);
-
         // ask if the permissions should be changed
         if ($io->isInteractive()) {
             $validator = (function ($arg) {
@@ -65,23 +63,6 @@ class Installer
 
         if (class_exists('\Cake\Codeception\Console\Installer')) {
             \Cake\Codeception\Console\Installer::customizeCodeceptionBinary($event);
-        }
-    }
-
-    /**
-     * Create the config/app.php file if it does not exist.
-     *
-     * @param string $dir The application's root directory.
-     * @param \Composer\IO\IOInterface $io IO interface to write to console.
-     * @return void
-     */
-    public static function createAppConfig($dir, $io)
-    {
-        $appConfig = $dir . '/config/app.php';
-        $defaultConfig = $dir . '/config/app.default.php';
-        if (!file_exists($appConfig)) {
-            copy($defaultConfig, $appConfig);
-            $io->write('Created `config/app.php` file');
         }
     }
 
@@ -141,7 +122,7 @@ class Installer
      */
     public static function setSecuritySalt($dir, $io)
     {
-        $config = $dir . '/config/app.php';
+        $config = $dir . '/config/security.php';
         $content = file_get_contents($config);
 
         $newKey = hash('sha256', $dir . php_uname() . microtime(true));

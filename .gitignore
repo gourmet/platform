@@ -1,7 +1,6 @@
 # Used by package managers
 /bower_components/*
 /node_modules/*
-/plugins/*
 /vendor/*
 
 # Used for temporary storage

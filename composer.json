@@ -26,6 +26,7 @@
         "cakephp/cakephp": "~3.0",
         "cakephp/migrations": "~1.0",
         "cakephp/plugin-installer": "*",
+        "gourmet/email": "~3.0.0",
         "gourmet/faker": "~1.0",
         "gourmet/robo": "dev-master",
         "friendsofcake/bootstrap-ui": "*",

@@ -18,6 +18,11 @@ $emailProfiles = ['default' => [
     'transport' => 'default',
 ]];
 
+if (Plugin::loaded('Gourmet/Email')) {
+    $emailProfiles['default']['layout'] = 'Gourmet/Email.default';
+    $emailProfiles['default']['helpers'][] = 'Gourmet/Email.Email';
+}
+
 foreach (consume('Email.profiles', []) as $emailProfile => $emailProfileConfig) {
     $emailProfiles[$emailProfile] = $emailProfileConfig + $emailProfiles['default'];
 }

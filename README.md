@@ -22,6 +22,7 @@ libraries/plugins and some 'best practices'.
 * [cakephp/migrations][migrations/repo] - the official CakePHP migrations shell.
 * [friendsofcake/bootstrap-ui][foc/bootstrap-ui/repo] to Bootstrap*-ify* CakePHP.
 * [friendsofcake/crud][foc/crud/repo] to quickly get things going.
+* [gourmet/email][email/repo] to better create/manage emails.
 * [gourmet/faker][faker/repo] to generate fixture and seed data.
 * [gourmet/robo][robo/repo] to run build or other tasks using [Robo][robo].
 * [josegonzalez/dotenv][dotenv/repo] to easily manage environment variables.
@@ -143,6 +144,7 @@ Copyright (c) 2015, Jad Bitar and licensed under [The MIT License][mit].
 [debugbar/repo]://github.com/maximebf/debugbar
 [debug_kit/repo]://github.com/cakephp/debug_kit
 [dotenv/repo]://github.com/josegonzalez/php-dotenv
+[email/repo]://github.com/gourmet/email
 [faker/repo]://github.com/gourmet/faker
 [foc/bootstrap-ui/repo]://github.com/friendsofcake/bootstrap-ui
 [foc/crud/repo]://github.com/friendsofcake/crud

@@ -8,6 +8,7 @@ Plugin::load('AssetCompress', ['bootstrap' => true]);
 Plugin::load('BootstrapUI');
 Plugin::load('Crud');
 Plugin::load('Migrations');
+Plugin::load('Gourmet/Email');
 Plugin::load('Gourmet/Faker');
 Plugin::load('Gourmet/Robo');
 Plugin::load('Gourmet/Whoops');

@@ -11,7 +11,6 @@ Plugin::load('Migrations');
 Plugin::load('Gourmet/Email');
 Plugin::load('Gourmet/Faker');
 Plugin::load('Gourmet/Robo');
-Plugin::load('Gourmet/Whoops');
 
 /**
  * If in debug mode, try loading DebugKit.
@@ -19,6 +18,7 @@ Plugin::load('Gourmet/Whoops');
 if (Configure::read('debug')) {
     try {
         Plugin::load('DebugKit', ['bootstrap' => true]);
+        Plugin::load('Gourmet/Whoops');
     } catch (MissingPluginException $e) {
     }
 }

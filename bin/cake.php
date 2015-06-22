@@ -3,8 +3,6 @@
 /**
  * Command-line code generation utility to automate programmer chores.
  *
- * PHP 5
- *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
@@ -30,6 +28,6 @@ if (version_compare(phpversion(), $minVersion, '<')) {
     exit(-1);
 }
 
-+include dirname(__DIR__) . '/bootstrap/start.php';
+include dirname(__DIR__) . '/bootstrap/start.php';
 
 exit(Cake\Console\ShellDispatcher::run($argv));

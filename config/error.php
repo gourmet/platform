@@ -24,7 +24,7 @@ $errorHandler = 'Cake\Error\ErrorHandler';
 if (php_sapi_name() === 'cli') {
     $errorHandler = 'Cake\Console\ConsoleErrorHandler';
 
-    /**
+/**
  * Whoops handler if available.
  */
 } elseif (class_exists('Gourmet\Whoops\Error\WhoopsHandler')) {

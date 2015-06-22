@@ -5,23 +5,32 @@ use Cake\Routing\Router;
 
 Router::defaultRouteClass('Route');
 
-Router::scope('/', function($routes) {
+Router::scope('/', function ($routes) {
 
     /**
-     * Here, we are connecting '/' (base path) to controller called 'Pages',
+     * Here, we are connecting '/' (base path) to a controller called 'Pages',
      * its action called 'display', and we pass a param to select the view file
-     * to use (in this case, /app/View/Pages/home.ctp)...
+     * to use (in this case, src/Template/Pages/home.ctp)...
      */
     $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
 
     /**
-     * ...and connect the rest of 'Pages' controller's urls.
+     * ...and connect the rest of 'Pages' controller's URLs.
      */
     $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
 
     /**
-     * Connect a route for the index action of any controller.
-     * And a more general catch all route for any action.
+     * Connect catchall routes for all controllers.
+     *
+     * Using the argument `InflectedRoute`, the `fallbacks` method is a shortcut for
+     *    `$routes->connect('/:controller', ['action' => 'index'], ['routeClass' => 'InflectedRoute']);`
+     *    `$routes->connect('/:controller/:action/*', [], ['routeClass' => 'InflectedRoute']);`
+     *
+     * Any route class can be used with this method, such as:
+     * - DashedRoute
+     * - InflectedRoute
+     * - Route
+     * - Or your own route class
      *
      * You can remove these routes once you've connected the
      * routes you want in your application.

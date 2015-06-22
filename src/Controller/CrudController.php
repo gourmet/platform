@@ -14,6 +14,8 @@ class CrudController extends AppController
 
     /**
      * {@inheritdoc}
+     *
+     * @return void
      */
     public function initialize()
     {

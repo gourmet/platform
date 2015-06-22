@@ -16,7 +16,7 @@ libraries/plugins and some 'best practices'.
 
 ## Pre-installed packages
 
-### Composer
+### PHP packages
 
 * [cakephp/cakephp][cakephp/repo] to power the application.
 * [cakephp/migrations][migrations/repo] - the official CakePHP migrations shell.
@@ -30,7 +30,7 @@ libraries/plugins and some 'best practices'.
 minification, etc.
 * [mobiledetect/mobiledetectlib][mobiledetect/repo].
 
-##### Developer mode
+#### Development dependencies
 
 * [cakephp/bake][bake/repo] - the official CakePHP bake tool.
 * [cakephp/cakephp-codesniffer][codesniffer/repo] - the official CakePHP code
@@ -44,21 +44,18 @@ standard sniffs.
 * [gourmet/whoops][whoops/repo] to beautify errors and exceptions (only in debug
 mode).
 
-### Bower
+### CSS/JS assets
+
+Assets are installed using [robloach/component-installer][component/repo]:
 
 * [twbs/bootstrap][bootstrap]
 * [jquery/jquery][jquery]
-
-### Node
-
-* [Bower][bower] - Front-end package manager
 
 ## Get started
 
 It is assumed that you have the following installed globally:
 
 * [Composer][composer] - PHP package manager
-* [NPM][npm] - NodeJS package manager
 
 If (or once) you have them all installed, run:
 
@@ -132,7 +129,6 @@ Copyright (c) 2015, Jad Bitar and licensed under [The MIT License][mit].
 [bake/repo]://github.com/cakephp/bake
 [bootstrap]:http://getbootstrap.com
 [boris/repo]://github.com/d11wtq/boris
-[bower]:http://bower.io
 [cakephp]:http://cakephp.org
 [cakephp/2033]://github.com/cakephp/cakephp/issues/2033
 [cakephp/repo]://github.com/cakephp/cakephp
@@ -141,6 +137,7 @@ Copyright (c) 2015, Jad Bitar and licensed under [The MIT License][mit].
 [codeception/repo]://github.com/cakephp/codeception
 [codesniffer/repo]://github.com/cakephp/cakephp-codesniffer
 [composer]://getcomposer.org/doc/00-intro.md#globally
+[component/repo]://github.com/robloach/component-installer
 [debugbar/repo]://github.com/maximebf/debugbar
 [debug_kit/repo]://github.com/cakephp/debug_kit
 [dotenv/repo]://github.com/josegonzalez/php-dotenv
@@ -155,7 +152,6 @@ Copyright (c) 2015, Jad Bitar and licensed under [The MIT License][mit].
 [mit]:http://www.opensource.org/licenses/mit-license.php
 [mobiledetect/repo]://github.com/mobiledetectlib/mobiledetectlib
 [monolog/repo]://github.com/seldaek/monolog
-[npm]:http://npmjs.com
 [phinx/repo]://github.com/robmorgan/phinx
 [phpunit/repo]://github.com/sebastianbergmann/phpunit
 [puppet]:https://puppetlabs.com

@@ -2,7 +2,7 @@
 
 A skeleton to quickly cook some _gourmet_ [CakePHP][cakephp] web apps.
 
-> __NOTE:__ Platform is in beta, still [missing a couple more packages](#TODO)
+> __NOTE:__ Platform is in beta, still [missing a couple more packages](#todo)
 > but ready to help you quickly get started with your [CakePHP 3][cakephp]
 > application.
 
@@ -153,7 +153,7 @@ Copyright (c) 2015, Jad Bitar and licensed under [The MIT License][mit].
 [milestones]://github.com/gourmet/platform/issues/milestones
 [migrations/repo]://github.com/cakephp/migrations
 [mit]:http://www.opensource.org/licenses/mit-license.php
-[mobiledetect/repo]://github.com/mobiledetectlib/mobiledetectlib
+[mobiledetect/repo]://github.com/serbanghita/Mobile-Detect
 [monolog/repo]://github.com/seldaek/monolog
 [npm]:http://npmjs.com
 [phinx/repo]://github.com/robmorgan/phinx

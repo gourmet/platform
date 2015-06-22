@@ -1,5 +1,6 @@
 <?php
 
+use Cake\Core\Plugin;
 use Cake\Network\Email\Email;
 
 $emailFrom = read('App.email', 'no-reply@' . env('HTTP_HOST'));

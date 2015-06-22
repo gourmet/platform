@@ -14,8 +14,8 @@ use Cake\Core\Configure;
  *   will be auto detected.
  * - dir - Name of app directory.
  * - webroot - The webroot directory.
- * - www_root - The file path to webroot.
- * - baseUrl - To configure CakePHP *not* to use mod_rewrite and to
+ * - wwwRoot - The file path to webroot.
+ * - baseUrl - To configure CakePHP to *not* use mod_rewrite and to
  *   use CakePHP pretty URLs, remove these .htaccess
  *   files:
  *      /.htaccess
@@ -25,8 +25,9 @@ use Cake\Core\Configure;
  * - imageBaseUrl - Web path to the public images directory under webroot.
  * - cssBaseUrl - Web path to the public css directory under webroot.
  * - jsBaseUrl - Web path to the public js directory under webroot.
- * - paths - Configure paths for non class based resources. Supports the `plugins` and `templates`
- *   subkeys, which allow the definition of paths for plugins and view templates respectively.
+ * - paths - Configure paths for non class based resources. Supports the
+ *   `plugins`, `templates`, `locales` subkeys, which allow the definition of
+ *   paths for plugins, view templates and locale files respectively.
  */
 
 Configure::write('App', [
@@ -38,14 +39,15 @@ Configure::write('App', [
     'base' => false,
     'dir' => APP_DIR,
     'webroot' => 'webroot',
-    'www_root' => WWW_ROOT,
+    'wwwRoot' => WWW_ROOT,
     // 'baseUrl' => env('SCRIPT_NAME'),
     'fullBaseUrl' => false,
-    'imageBaseUrl' => 'img' . DS,
-    'cssBaseUrl' => 'css' . DS,
-    'jsBaseUrl' => 'js' . DS,
+    'imageBaseUrl' => 'img/',
+    'cssBaseUrl' => 'css/',
+    'jsBaseUrl' => 'js/',
     'paths' => [
         'plugins' => [ROOT . DS . 'plugins' . DS],
         'templates' => [APP . 'Template' . DS],
+        'locales' => [APP . 'Locale' . DS],
     ],
 ]);

@@ -7,6 +7,8 @@ class AppView extends View
 {
     /**
      * {@inheritdoc}
+     *
+     * @return void
      */
     public function initialize()
     {

@@ -7,10 +7,10 @@
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
- * @since         3.0.0
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+ * @copyright Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link      http://cakephp.org CakePHP(tm) Project
+ * @since     3.0.0
+ * @license   http://www.opensource.org/licenses/mit-license.php MIT License
  */
 namespace App\Shell;
 
@@ -20,7 +20,7 @@ use Cake\Log\Log;
 use Psy\Shell as PsyShell;
 
 /**
- * Simple console wrapper around Boris.
+ * Simple console wrapper around Psy\Shell.
  */
 class ConsoleShell extends Shell
 {

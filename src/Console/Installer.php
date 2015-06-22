@@ -166,7 +166,7 @@ class Installer
 
         $result = file_put_contents($config, $content);
         if ($result) {
-            $io->write('Updated Security.salt value in config/app.php');
+            $io->write('Updated Security.salt value in config/security.php');
             return;
         }
         $io->write('Unable to update Security.salt value.');

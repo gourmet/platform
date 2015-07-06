@@ -43,6 +43,7 @@ standard sniffs.
 * [d11wtq/boris][boris/repo]
 * [gourmet/whoops][whoops/repo] to beautify errors and exceptions (only in debug
 mode).
+* [loadsys/puphpet-release] for a quick Vagrant VM using [PuPHPet].
 
 ### Bower
 
@@ -92,6 +93,12 @@ fuzzy finder, the first matching file should the log config file).
 
 _To reduce the # of requires, a build process should concatenate all these and
 use the resulting file in production. It has yet to be implemented._
+
+### VM Configuration
+
+The VM is created based on the `puphpet.yaml` configuration. If you don't want
+to manually edit this file, you could drag & drop it on the [PuPHPet] website
+to use their UI for modifying it.
 
 ### Quick Tips
 
@@ -168,3 +175,5 @@ Copyright (c) 2015, Jad Bitar and licensed under [The MIT License][mit].
 [vagrant]:http://vagrantup.com
 [verify/repo]://github.com/codeception/verify
 [whoops/repo]://github.com/gourmet/whoops
+[loadsys/puphpet-release]://github.com/loadsys/puphpet-release
+[PuPHPet]:http://puphpet.com

@@ -13,3 +13,5 @@
 
 # Used by Vagrant
 /.vagrant/*
+/puphpet/*
+/Vagrantfile

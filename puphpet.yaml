@@ -38,7 +38,7 @@ vagrantfile:
         synced_folder:
             vflsf_0pepyhou0m45:
                 source: ./
-                target: /var/www/aspirion.dev
+                target: /var/www/myapp.dev
                 sync_type: default
                 smb:
                     smb_host: ''
@@ -61,8 +61,8 @@ vagrantfile:
     ssh:
         host: null
         port: null
-        private_key_path: ~/.ssh/id_rsa
-        username: root
+        private_key_path: null
+        username: vagrant
         guest_port: null
         keep_alive: true
         forward_agent: false

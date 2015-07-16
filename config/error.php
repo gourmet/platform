@@ -1,5 +1,6 @@
 <?php
 
+use Cake\Core\Configure;
 use Cake\Utility\Hash;
 
 /**
@@ -12,6 +13,8 @@ $errorConfig = read('Error', []) + [
     'log' => true,
     'trace' => true,
 ];
+
+Configure::write('Error', $errorConfig);
 
 /**
  * Default error handler.

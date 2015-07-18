@@ -3,7 +3,7 @@
 use Cake\Core\Plugin;
 use Cake\Routing\Router;
 
-Router::defaultRouteClass('Route');
+Router::defaultRouteClass('DashedRoute');
 
 Router::scope('/', function ($routes) {
 

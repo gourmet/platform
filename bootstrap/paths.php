@@ -23,4 +23,4 @@ define('TMP', ROOT . DS . 'tmp' . DS);
 define('LOGS', ROOT . DS . 'logs' . DS);
 define('CACHE', TMP . 'cache' . DS);
 
-define('TESTS', ROOT . DS . 'Test' . DS);
+define('TESTS', ROOT . DS . 'tests' . DS);

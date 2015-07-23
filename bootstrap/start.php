@@ -18,12 +18,6 @@ require 'autoload.php';
 try {
     $dotenv = (new josegonzalez\Dotenv\Loader(ROOT . DS . '.env'))
         ->parse()
-        ->expect(
-            'DATABASE_DEFAULT_HOST',
-            'DATABASE_DEFAULT_USER',
-            'DATABASE_DEFAULT_PASS',
-            'DATABASE_DEFAULT_NAME'
-        )
         ->toEnv();
 } catch (RuntimeException $e) {
     die($e->getMessage());

@@ -31,7 +31,7 @@ use Cake\Core\Configure;
  */
 
 Configure::write('App', [
-    'title' => 'Your Application Name',
+    'title' => env('APP_TITLE') ?: 'Your Application Name',
     'author' => 'Your Name',
     'namespace' => 'App',
     'encoding' => 'UTF-8',

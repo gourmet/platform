@@ -29,7 +29,7 @@
     ],
     "require": {
         "php": ">=5.5.11",
-        "cakephp/cakephp": "~3.0",
+        "cakephp/cakephp": "~3.1",
         "cakephp/migrations": "~1.0",
         "cakephp/plugin-installer": "*",
         "gourmet/email": "~3.0",
@@ -43,10 +43,10 @@
         "psr/log": "~1.0"
     },
     "require-dev": {
-        "cakephp/bake": "~1.0",
+        "cakephp/bake": "~1.1",
         "cakephp/cakephp-codesniffer": "~2.0",
         "cakephp/codeception": "dev-master",
-        "cakephp/debug_kit": "~3.0",
+        "cakephp/debug_kit": "~3.2",
         "codeception/specify": "~0.3",
         "codeception/verify": "~0.2",
         "loadsys/puphpet-release": "0.3.*",

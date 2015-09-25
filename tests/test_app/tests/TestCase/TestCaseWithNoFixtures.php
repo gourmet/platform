@@ -9,5 +9,10 @@ use Cake\TestSuite\TestCase;
  */
 class TestCaseWithNoFixtures extends TestCase
 {
+    /**
+     * The fixtures to load.
+     *
+     * @var array
+     */
     public $fixtures;
 }

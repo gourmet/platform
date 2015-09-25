@@ -13,7 +13,43 @@ use TestApp\Test\TestCase\TestCaseWithNoFixtures;
 class FixtureManagerTest extends TestCase
 {
 
-    public $fixtures;
+    /**
+     * The class under test.
+     *
+     * @var FixtureManager
+     */
+    public $fixtureManager;
+
+    /**
+     * The application namespace to preserve.
+     *
+     * @var string
+     */
+    public $namespace;
+
+    /**
+     * Runs before each test.
+     *
+     * @return void
+     */
+    public function setUp()
+    {
+        $this->namespace = Configure::read('App.namespace');
+        Configure::write('App.namespace', 'TestApp');
+
+        $fixturePath = TEST_APP_TESTS . 'Fixture';
+        $this->fixtureManager = new FixtureManager($fixturePath);
+    }
+
+    /**
+     * Runs after each test.
+     *
+     * @return void
+     */
+    public function tearDown()
+    {
+        Configure::write('App.namespace', $this->namespace);
+    }
 
     /**
      * @test
@@ -25,16 +61,9 @@ class FixtureManagerTest extends TestCase
 
         $this->assertNull($testCaseWithNoFixtures->fixtures);
 
-        Configure::write('App.namespace', 'TestApp');
-        $fixturePath = TEST_APP_TESTS . 'Fixture';
+        $this->fixtureManager->fixturize($testCaseWithNoFixtures);
 
-        $fixtureManager = new FixtureManager($fixturePath);
-        $fixtureManager->fixturize($testCaseWithNoFixtures);
-
-        $expected = [
-            'app.first_test',
-            'app.second_test',
-        ];
+        $expected = ['app.first_test', 'app.second_test'];
         $actual = $testCaseWithNoFixtures->fixtures;
 
         $this->assertEquals($expected, $actual);

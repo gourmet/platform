@@ -37,7 +37,7 @@
         "gourmet/robo": "dev-master",
         "friendsofcake/bootstrap-ui": "*",
         "friendsofcake/crud-view": "dev-master",
-        "josegonzalez/dotenv": "~0.6",
+        "josegonzalez/dotenv": "~1.0",
         "markstory/asset_compress": "~3.0",
         "mobiledetect/mobiledetectlib": "~2.0",
         "psr/log": "~1.0"

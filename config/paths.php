@@ -1,7 +1,5 @@
 <?php
 
-use Cake\Core\Configure;
-
-Configure::write('Path', [
+return [
     'robofile' => ROOT . DS . 'build' . DS . 'robo.php',
-]);
+];

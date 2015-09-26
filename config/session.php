@@ -1,7 +1,5 @@
 <?php
 
-use Cake\Core\Configure;
-
 /**
  * Session configuration.
  *
@@ -38,6 +36,6 @@ use Cake\Core\Configure;
  * To use database sessions, load the SQL file located at config/Schema/sessions.sql
  */
 
-Configure::write('Session', [
+return [
     'defaults' => 'php',
-]);
+];

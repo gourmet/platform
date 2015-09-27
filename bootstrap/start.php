@@ -34,18 +34,20 @@ require 'functions.php';
 Cake\Routing\Router::reload();
 
 /**
- * Set the application's debug mode.
- */
-Cake\Core\Configure::write('debug', file_exists(ROOT . DS . '.debug') or env('DEBUG'));
-
-/**
  * Set the application's default configurations.
  */
-require CONFIG . 'application.php';
-require CONFIG . 'paths.php';
-require CONFIG . 'security.php';
-require CONFIG . 'acl.php';
-require CONFIG . 'session.php';
+Cake\Core\Configure::write([
+    'debug' => file_exists(ROOT . DS . '.debug') or env('DEBUG'),
+    'App' => include CONFIG . 'application.php',
+    'Path' => include CONFIG . 'paths.php',
+    'Security' => include CONFIG . 'security.php',
+    'Session' => include CONFIG . 'session.php',
+    'Acl' => include CONFIG . 'acl.php',
+]);
+
+/**
+ * Dispatcher configuration.
+ */
 require CONFIG . 'dispatcher.php';
 
 /**

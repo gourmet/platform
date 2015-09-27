@@ -1,7 +1,5 @@
 <?php
 
-use Cake\Core\Configure;
-
 /**
  * Configure basic information about the application.
  *
@@ -30,7 +28,7 @@ use Cake\Core\Configure;
  *   paths for plugins, view templates and locale files respectively.
  */
 
-Configure::write('App', [
+return [
     'title' => env('APP_TITLE') ?: 'Your Application Name',
     'author' => 'Your Name',
     'namespace' => 'App',
@@ -50,4 +48,4 @@ Configure::write('App', [
         'templates' => [APP . 'Template' . DS],
         'locales' => [APP . 'Locale' . DS],
     ],
-]);
+];

@@ -1,7 +1,5 @@
 <?php
 
-use Cake\Core\Configure;
-
-Configure::write('Security', [
+return [
     'salt' => '__SALT__',
-]);
+];

@@ -40,7 +40,10 @@
         "josegonzalez/dotenv": "~1.0",
         "markstory/asset_compress": "~3.0",
         "mobiledetect/mobiledetectlib": "~2.0",
-        "psr/log": "~1.0"
+        "psr/log": "~1.0",
+        "robloach/component-installer": "*",
+        "components/bootstrap": "~3.1.1",
+        "components/jquery": "~2.1.0"
     },
     "require-dev": {
         "cakephp/bake": "~1.1",
@@ -74,9 +77,7 @@
     "scripts": {
         "post-install-cmd": [
             "App\\Console\\Installer::postInstall",
-            "vendor/bin/codecept build",
-            "npm install",
-            "bower install"
+            "vendor/bin/codecept build"
         ],
         "post-autoload-dump": [
             "Cake\\Composer\\Installer\\PluginInstaller::postAutoloadDump"

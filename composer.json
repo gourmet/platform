@@ -82,8 +82,7 @@
     "scripts": {
         "post-install-cmd": [
             "App\\Console\\Installer::postInstall",
-            "vendor/bin/codecept build",
-            "php -r \"touch('.debug');\""
+            "vendor/bin/codecept build"
         ],
         "post-autoload-dump": [
             "Cake\\Composer\\Installer\\PluginInstaller::postAutoloadDump"

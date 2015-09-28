@@ -3,7 +3,7 @@ vagrantfile:
     vm:
         box: puphpet/ubuntu1404-x64
         box_url: puphpet/ubuntu1404-x64
-        hostname: myapp.dev
+        hostname: platform.dev
         memory: '512'
         cpus: '1'
         chosen_provider: virtualbox
@@ -20,7 +20,7 @@ vagrantfile:
         provider:
             virtualbox:
                 modifyvm:
-                    natdnshostresolver1: on
+                    natdnshostresolver1: 'on'
                 showgui: '0'
             vmware:
                 numvcpus: 1
@@ -38,7 +38,7 @@ vagrantfile:
         synced_folder:
             vflsf_0pepyhou0m45:
                 source: ./
-                target: /var/www/myapp.dev
+                target: /var/www/platform.dev
                 sync_type: default
                 smb:
                     smb_host: ''
@@ -74,10 +74,21 @@ server:
     install: '1'
     packages:
         - git
+        - silversearcher-ag
+        - htop
+        - vim
+        - glances
 users_groups:
     install: '1'
     groups: {  }
     users: {  }
+locale:
+    install: '1'
+    settings:
+        default_locale: en_US.UTF-8
+        locales:
+            - en_GB.UTF-8
+            - en_US.UTF-8
 firewall:
     install: '1'
     rules: {  }
@@ -92,14 +103,14 @@ nginx:
         proxy_buffers: '4 256k'
     upstreams: {  }
     vhosts:
-        nxv_hs7krprs4mpk:
-            server_name: myapp.dev
-            www_root: /var/www/myapp.dev
+        nxv_auquycncc4l2:
+            server_name: platform.dev
+            www_root: /var/www/platform.dev/webroot
             listen_port: '80'
             index_files:
                 - index.php
             client_max_body_size: 1m
-            ssl: '1'
+            ssl: '0'
             ssl_cert: ''
             ssl_key: ''
             ssl_port: '443'
@@ -110,20 +121,21 @@ nginx:
             locations:
                 nxvl_4icz0jteyxbx:
                     location: /
-                    autoindex: off
+                    autoindex: false
+                    internal: false
                     try_files:
                         - $uri
-                        - $uri/
-                        - /index.php?$args
+                        - '/index.php?$args'
                     fastcgi: ''
                     fastcgi_index: ''
                     fastcgi_split_path: ''
                 nxvl_hx515wsdpcch:
                     location: '~ \.php$'
-                    autoindex: off
+                    autoindex: false
+                    internal: false
                     try_files:
                         - $uri
-                        - =404
+                        - '=404'
                     fastcgi: '127.0.0.1:9000'
                     fastcgi_index: index.php
                     fastcgi_split_path: '^(.+\.php)(/.*)$'
@@ -143,10 +155,10 @@ apache:
         - proxy_fcgi
         - rewrite
     vhosts:
-        av_sdrfe1jdtcqw:
-            servername: myapp.dev
-            docroot: /var/www/myapp.dev
-            port: '443'
+        av_mrew1kiloimw:
+            servername: platform.dev
+            docroot: /var/www/platform.dev/webroot
+            port: '80'
             custom_fragment: ''
             ssl: '0'
             ssl_cert: ''
@@ -156,8 +168,8 @@ apache:
             ssl_protocol: ''
             ssl_cipher: ''
             directories:
-                avd_75wms0th1zsr:
-                    path: /var/www/myapp.dev
+                avd_9kxt6umiwj3v:
+                    path: /var/www/platform.dev/webroot
                     options:
                         - Indexes
                         - FollowSymlinks
@@ -168,38 +180,7 @@ apache:
                         - 'all granted'
                     custom_fragment: ''
                     files_match:
-                        avdfm_d14imb4prqld:
-                            path: \.php$
-                            sethandler: 'proxy:fcgi://127.0.0.1:9000'
-                            custom_fragment: ''
-                            provider: filesmatch
-                    provider: directory
-        av_7zxh5zot7ezs:
-            servername: myapp.dev
-            docroot: /var/www/myapp.dev
-            port: '443'
-            custom_fragment: ''
-            ssl: '1'
-            ssl_cert: ''
-            ssl_key: ''
-            ssl_chain: ''
-            ssl_certs_dir: ''
-            ssl_protocol: ''
-            ssl_cipher: ''
-            directories:
-                avd_p80t04hmjvpc:
-                    path: /var/www/myapp.dev
-                    options:
-                        - Indexes
-                        - FollowSymlinks
-                        - MultiViews
-                    allow_override:
-                        - All
-                    require:
-                        - 'all granted'
-                    custom_fragment: ''
-                    files_match:
-                        avdfm_xsmjorprqv5r:
+                        avdfm_v2y0sra3q72l:
                             path: \.php$
                             sethandler: 'proxy:fcgi://127.0.0.1:9000'
                             custom_fragment: ''
@@ -223,7 +204,7 @@ php:
         pecl:
             - pecl_http
     ini:
-        display_errors: On
+        display_errors: 'On'
         error_reporting: '-1'
         session.save_path: /var/lib/php/session
         date.timezone: UTC
@@ -292,13 +273,13 @@ hhvm:
         hhvm.log.use_log_file: '1'
         hhvm.log.file: /var/log/hhvm/error.log
     php_ini:
-        display_errors: On
+        display_errors: 'On'
         error_reporting: '-1'
         date.timezone: UTC
 mysql:
     install: '1'
     settings:
-        version: '5.5'
+        version: '5.6'
         root_password: '123'
         override_options: {  }
     adminer: 0
@@ -316,6 +297,27 @@ mysql:
     grants:
         mysqlng_guxp3gr6dkz8:
             user: my_app
+            table: '*.*'
+            privileges:
+                - ALL
+mariadb:
+    install: '0'
+    settings:
+        version: '10.0'
+        root_password: '123'
+        override_options: {  }
+    adminer: 0
+    users:
+        mariadbnu_ffjuc4acd9pl:
+            name: dbuser
+            password: '123'
+    databases:
+        mariadbnd_v16c815j8ewe:
+            name: dbname
+            sql: ''
+    grants:
+        mariadbng_i2tu82i69ksr:
+            user: dbuser
             table: '*.*'
             privileges:
                 - ALL
@@ -354,7 +356,7 @@ mailcatcher:
         http_ip: 0.0.0.0
         http_port: '1080'
         mailcatcher_path: /usr/local/rvm/wrappers/default
-        from_email_method: inline
+        from_email_method: headers
 beanstalkd:
     install: '0'
     settings:

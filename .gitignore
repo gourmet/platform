@@ -11,6 +11,11 @@
 /.env
 
 # Used by Vagrant
-/.vagrant/*
-/puphpet/*
+/.vagrant/
+/puphpet/files/dot/
+/puphpet/puppet/
+/puphpet/ruby/
+/puphpet/shell/
+/puphpet/vagrant/
+/puphpet/config-custom.yaml
 /Vagrantfile

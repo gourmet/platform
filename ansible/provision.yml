@@ -1,0 +1,36 @@
+---
+
+- hosts: webservers
+
+  vars:
+    - ferm_enabled: False
+    - secret_dir: 'secrets'
+    - secret_levels: ''
+
+  roles:
+
+    - role: 'debops.apt'
+
+    - role: 'debops.bootstrap'
+
+    - role: 'debops.core'
+
+    - role: 'debops.debug'
+      tags: 'debug'
+      debug_variables: '{{ project_root_path + "/logs/ansible_variables.log" }}'
+      when: '( project_debug is defined and project_debug | bool)'
+
+    - role: 'ANXS.mysql' # debops.mysql has too many debops dependencies
+
+    - role: 'geerlingguy.apache' # debops.nginx has too many debops dependencies
+      tags: 'nginx'
+      nginx_remove_default_vhost: True
+
+    - role: 'debops.php5'
+      php5_production: True
+
+    - role: 'debops.redis'
+      redis_sentinel_standalone: False
+
+    - role: 'debops.swapfile'
+      swapfile_size: '{{ 2 * ansible_memtotal_mb }}'

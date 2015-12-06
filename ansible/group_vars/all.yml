@@ -1,0 +1,46 @@
+---
+
+project_debug: False
+project_owner: 'deployer'
+project_root_path: '/var/www/example.com'
+
+apt_repositories:
+  - repo: 'ppa:ondrej/php5-5.6'
+
+mysql_databases: 
+  - name: 'my_app'
+
+mysql_users:
+  - name: 'my_app'
+    pass: 'secret'
+
+nginx_vhosts: 
+  - listen: '80'
+    server_name: 'www.example.com'
+    root: '{{ project_root_path + "/webroot" }}'
+    index: 'index.php'
+    access_log: '{{ project_root_path + "/logs/nginx_access.log" }}'
+    extra_parameters: |
+      rewrite 301 http://www.example.com$request_uri permanent;
+      error_log {{ project_root_path }}/logs/nginx_error.log;
+      location / { 
+          try_files $uri /index.php?$args; 
+      }
+      location ~ \.php$ {
+          try_files $uri =404;
+          fastcgi_split_path_info ^(.+\.php)(/.+)$;
+          fastcgi_pass unix:/var/run/php5-fpm.sock;
+          fastcgi_index index.php;
+          fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+          include fastcgi_params;
+      }
+
+php5_packages:
+  - 'php5-cli'
+  - 'php5-curl'
+  - 'php5-gd'
+  - 'php5-intl'
+  - 'php5-mcrypt'
+  - 'php5-mysql'
+  - 'php5-redis'
+  - 'php5-sqlite'

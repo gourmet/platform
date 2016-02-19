@@ -1,0 +1,6 @@
+# Ignore all roles ...
+/*/
+
+# ... with the exception of:
+!boot/
+!wrap/

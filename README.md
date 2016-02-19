@@ -43,7 +43,6 @@ standard sniffs.
 * [d11wtq/boris][boris/repo]
 * [gourmet/whoops][whoops/repo] to beautify errors and exceptions (only in debug
 mode).
-* [loadsys/puphpet-release] for a quick Vagrant VM using [PuPHPet].
 
 ### CSS/JS assets
 
@@ -91,12 +90,6 @@ fuzzy finder, the first matching file should the log config file).
 _To reduce the # of requires, a build process should concatenate all these and
 use the resulting file in production. It has yet to be implemented._
 
-### VM Configuration
-
-The VM is created based on the `puphpet.yaml` configuration. If you don't want
-to manually edit this file, you could drag & drop it on the [PuPHPet] website
-to use their UI for modifying it.
-
 ### Quick Tips
 
 To enable `debug` mode without having to modify any file:
@@ -106,6 +99,58 @@ touch .debug
 ```
 
 or use the `DEBUG` environment variable.
+
+## Provisioning
+
+To keep things DRY and not re-invent the wheel, `ansible-galaxy` (the Ansible
+package manager) is used. To install the roles:
+
+```
+ansible-galaxy install --role-file ansible/requirements.yml --force
+```
+
+For more, read [Ansible's official documentation].
+
+### Local development
+
+A `Vagrantfile` is included to make it easy to start a local VM using the
+Ansible provisioner. Modify it to suit your needs, but the defaults should be
+a good start in most cases. They assume:
+
+```
+Box: trusty64
+Box Url:
+Memory: 512MB
+CPUs: 1
+Synced Folders: ./ -> /vagrant (using NFS)
+```
+
+The `ansible` provisioner is the preferred method but if you don't have it installed
+locally, no worries. A shell provisioner will install Ansible on the VM and run the
+playbook.
+
+All you need to do is:
+
+```
+vagrant up
+```
+
+To manually run the playbook (after an initial `vagrant up`):
+
+```
+ansible-playbook ansible/provision.yml \
+--private-key=.vagrant/machines/default/virtualbox/private_key \
+-i .vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory \
+-u root
+```
+
+Sometimes, running the above command will trigger the following error:
+
+```
+fatal: [default] => SSH Error: Host key verification failed.
+```
+
+In those cases, just make sure that your `~/.ssh/known_hosts`
 
 ## TODO
 
@@ -161,8 +206,6 @@ Copyright (c) 2015, Jad Bitar and licensed under [The MIT License][mit].
 [monolog/repo]://github.com/seldaek/monolog
 [phinx/repo]://github.com/robmorgan/phinx
 [phpunit/repo]://github.com/sebastianbergmann/phpunit
-[puppet]:https://puppetlabs.com
-[puphpet]:https://puphpet.com
 [robo]:http://robo.li
 [robo/repo]://github.com/gourmet/robo
 [rocketeer/repo]://github.com/anahkiasen/rocketeer
@@ -171,5 +214,3 @@ Copyright (c) 2015, Jad Bitar and licensed under [The MIT License][mit].
 [vagrant]:http://vagrantup.com
 [verify/repo]://github.com/codeception/verify
 [whoops/repo]://github.com/gourmet/whoops
-[loadsys/puphpet-release]://github.com/loadsys/puphpet-release
-[PuPHPet]:http://puphpet.com

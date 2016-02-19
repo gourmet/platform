@@ -21,16 +21,6 @@
         "issues": "http://github.com/gourmet/platform/issues",
         "source": "http://github.com/gourmet/platform"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/deizel/puphpet-release"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/deizel/puphpet-release-composer-installer"
-        }
-    ],
     "require": {
         "php": ">=5.5.11",
         "cakephp/cakephp": "~3.1",
@@ -56,8 +46,6 @@
         "cakephp/debug_kit": "~3.2",
         "codeception/specify": "~0.3",
         "codeception/verify": "~0.2",
-        "loadsys/puphpet-release": "0.6.*",
-        "loadsys/puphpet-release-composer-installer": "dev-master",
         "psy/psysh": "@stable",
         "gourmet/whoops": "~1.0"
     },

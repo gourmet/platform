@@ -1,0 +1,19 @@
+---
+
+- src: ANXS.mysql
+
+- src: debops.apt
+
+- src: debops.bootstrap
+
+- src: debops.core
+
+- src: debops.debug
+
+- src: debops.php5
+
+- src: debops.redis
+
+- src: debops.swapfile
+
+- src: geerlingguy.apache

@@ -40,9 +40,9 @@ return [
     'wwwRoot' => WWW_ROOT,
     // 'baseUrl' => env('SCRIPT_NAME'),
     'fullBaseUrl' => false,
-    'imageBaseUrl' => 'images/',
-    'cssBaseUrl' => 'styles/css/',
-    'jsBaseUrl' => 'scripts/',
+    'imageBaseUrl' => 'img/',
+    'cssBaseUrl' => 'css/',
+    'jsBaseUrl' => 'js/',
     'paths' => [
         'plugins' => [ROOT . DS . 'plugins' . DS],
         'templates' => [APP . 'Template' . DS],

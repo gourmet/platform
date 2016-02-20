@@ -24,6 +24,22 @@
 
     <?= $this->fetch('body', '<body' . $this->fetch('bodyAttributes') . '>') ?>
 
+        <!--[if lt IE 9]>
+            <?php
+            echo $this->element('BootstrapUI.Flash/default', [
+                'message' => $this->Html->div(null, __("
+                    You are using an <strong>outdated</strong> browser.
+                    Please {upgrade} to improve your experience.
+                ", ['upgrade' => $this->Html->link(__('upgrade'), 'http://browsehappy.com')])),
+                'params' => [
+                    'class' => ['alert', 'alert-dismissible', 'alert-warning'],
+                    'escape' => false,
+                    'attributes' => ['attributes' => false],
+                ]
+            ]);
+            ?>
+        <![endif]-->
+
         <?= $this->fetch('content') ?>
         <?= $this->fetch('footer') ?>
         <?= $this->AssetCompress->script('platform') ?>

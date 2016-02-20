@@ -7,6 +7,7 @@ use Cake\Core\Plugin;
 Plugin::load('AssetCompress', ['bootstrap' => true]);
 Plugin::load('BootstrapUI');
 Plugin::load('Crud');
+Plugin::load('CrudView');
 Plugin::load('Migrations');
 Plugin::load('Gourmet/Email');
 Plugin::load('Gourmet/Faker');

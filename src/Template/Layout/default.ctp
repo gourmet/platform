@@ -1,11 +1,5 @@
 <!DOCTYPE html>
-
-<?php
-echo $this->fetch(
-    'html',
-    sprintf('<html lang="%s" class="no-js">', read('App.language'))
-);
-?>
+<html lang="<?= \Locale::getPrimaryLanguage(\Cake\I18n\I18n::locale()) ?>">
 
     <head>
 
@@ -15,38 +9,26 @@ echo $this->fetch(
             <?= $this->fetch('title', read('App.title', env('HTTP_HOST'))) ?>
         </title>
 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="<?= read('App.author') ?>">
+        <?= $this->Html->meta('icon') ?>
         <?= $this->fetch('meta') ?>
-
-
         <?= $this->AssetCompress->css('platform') ?>
-        <?= $this->fetch('css'); ?>
-        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <?= $this->fetch('css') ?>
+        <?= $this->fetch('headjs') ?>
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
-        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="//oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+            <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 
     </head>
 
     <?= $this->fetch('body', '<body' . $this->fetch('bodyAttributes') . '>') ?>
 
-        <?= $this->fetch('content'); ?>
-
-        <footer id="footer" class="footer">
-
-            <?= $this->fetch(
-                'footer',
-                sprintf(
-                    '&copy;%s %s',
-                    date('Y'),
-                    read('App.title', env('HTTP_HOST'))
-                )
-            );
-            ?>
-
-        </footer>
-
+        <?= $this->fetch('content') ?>
+        <?= $this->fetch('footer') ?>
         <?= $this->AssetCompress->script('platform') ?>
         <?= $this->fetch('script'); ?>
 

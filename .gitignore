@@ -1,5 +1,5 @@
 # Used by package managers
-/components/*
+/bower_components/*
 /vendor/*
 
 # Used for temporary storage

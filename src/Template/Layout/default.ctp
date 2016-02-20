@@ -17,12 +17,6 @@
         <?= $this->fetch('css') ?>
         <?= $this->fetch('headjs') ?>
 
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-            <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
     </head>
 
     <?= $this->fetch('body', '<body' . $this->fetch('bodyAttributes') . '>') ?>

@@ -5,6 +5,7 @@
 # Used for temporary storage
 /logs/*
 /tmp/*
+/webroot/assets/*
 
 # Used for sensitive/volatile config
 /.debug

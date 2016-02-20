@@ -4,6 +4,9 @@
     <head>
 
         <?= $this->Html->charset(); ?>
+        <!--[if IE 9]>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
 
         <title>
             <?= $this->fetch('title', read('App.title', env('HTTP_HOST'))) ?>

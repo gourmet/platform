@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<?= \Locale::getPrimaryLanguage(\Cake\I18n\I18n::locale()) ?>">
+<html lang="<?= \Locale::getPrimaryLanguage(\Cake\I18n\I18n::locale()) ?>" class="no-js">
 
     <head>
 
@@ -18,6 +18,7 @@
         <?= $this->fetch('meta') ?>
         <?= $this->AssetCompress->css('platform') ?>
         <?= $this->fetch('css') ?>
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         <?= $this->fetch('headjs') ?>
 
     </head>

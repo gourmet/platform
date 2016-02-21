@@ -26,7 +26,9 @@ $title = Configure::read('App.title');
 
         <div id="navbar" class="collapse navbar-collapse">
             
-            <!-- TODO: add menu using gourmet/knp-menu -->
+            <?php try { // wrap in try/catch to make sure it never fails (i.e. missing route) ?>
+                <!-- TODO: add menu using gourmet/knp-menu -->
+            <?php } catch (\Exception $e) { if (Configure::read('debug')) throw $e; } ?>
 
         </div>
 

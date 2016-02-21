@@ -4,8 +4,13 @@
         "Jad Bitar <jadbitar@mac.com>"
     ],
     "private": true,
-    "dependencies": {
-        "bootstrap-sass": "3.3.6",
-        "jquery": "2.2.0"
+    "devDependencies": {
+        "bootstrap-sass-official": "~3.3.6",
+        "bootstrap-datetimepicker": "~4.17.37",
+        "bootswatch": "~3.3.6",
+        "font-awesome": "~4.0.0",
+        "moment": "~2.11.2",
+        "selectize": "~0.12.1",
+        "jquery.dirtyforms": "~2.0.0"
     }
 }

@@ -33,7 +33,6 @@
         "gourmet/faker": "~1.0",
         "gourmet/robo": "dev-master",
         "josegonzalez/dotenv": "~1.0",
-        "leafo/scssphp": "~0.0.12",
         "markstory/asset_compress": "~3.0",
         "mobiledetect/mobiledetectlib": "~2.0",
         "psr/log": "~1.0"

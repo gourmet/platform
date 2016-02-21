@@ -6,6 +6,7 @@
 /logs/*
 /tmp/*
 /webroot/assets/*
+/webroot/css/*.css.map
 
 # Used for sensitive/volatile config
 /.debug

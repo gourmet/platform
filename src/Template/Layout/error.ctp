@@ -7,4 +7,5 @@ $this->reset('script');
 
 $this->Html->css('bootstrap', ['block' => true]);
 
+echo $this->element('Layout/header');
 echo $this->fetch('content');

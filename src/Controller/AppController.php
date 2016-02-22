@@ -70,7 +70,7 @@ class AppController extends Controller
 
         $this->Crud->addListener('CrudView.View');
         $this->viewBuilder()
-            ->className('CrudView.Crud')
+            ->className('Crud')
             ->layout('default');
     }
 

@@ -17,7 +17,6 @@
         <?= $this->Html->meta('icon') ?>
         <?= $this->fetch('meta') ?>
         <?= $this->fetch('css') ?>
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         <?= $this->fetch('headjs') ?>
 
     </head>

@@ -18,7 +18,7 @@ Router::scope('/', function ($routes) {
      */
     $pages = ['home', 'contact', 'about'];
     foreach ($pages as $page) $routes->connect(
-        '/' . $page === 'home' ? null : $page,
+        '/' . ($page === 'home' ? null : $page),
         ['controller' => 'Pages', 'action' => 'display', $page],
         ['_name' => $page]
     );

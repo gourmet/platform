@@ -10,4 +10,4 @@ $this->assign('title', $htmlTitle);
 $this->Html->css('bootstrap', ['block' => true]);
 
 echo $this->element('Layout/header');
-echo $this->fetch('content');
+echo $this->Html->div('container-fluid', $this->fetch('content'), ['escape' => false]);

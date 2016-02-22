@@ -10,8 +10,6 @@ $links = [
 ];
 ?>
 
-<div class="container">
-
     <div class="jumbotron"><div class="container">
 
         <h1><?= __("Oops!") ?></h1>
@@ -20,5 +18,3 @@ $links = [
         <p><?= __("We apologize for the inconvenience. Go back to the {homepage}.", $links) ?></p>
 
     </div></div>
-
-</div>

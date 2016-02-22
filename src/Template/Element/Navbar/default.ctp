@@ -4,13 +4,11 @@ if (!isset($class)) {
     $class = ['navbar', 'navbar-default'];
 }
 $class = array_unique((array)$class + ['navbar']);
-$container = (isset($fluid) && $fluid) ? '-fluid' : '';
-$title = Configure::read('App.title');
 ?>
 
 <nav class="<?= implode(' ', $class) ?>">
 
-    <div class="container<?= $container ?>">
+    <div class="container-fluid">
 
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">

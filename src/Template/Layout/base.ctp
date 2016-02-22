@@ -21,7 +21,7 @@
 
     </head>
 
-    <?= $this->fetch('body', '<body' . $this->fetch('bodyAttributes') . '>') ?>
+    <?= $this->fetch('body', sprintf('<body%s>', $this->fetch('bodyAttributes'))) ?>
 
         <!--[if lt IE 9]>
             <?php

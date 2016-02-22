@@ -5,7 +5,7 @@ $this->reset('css');
 $this->reset('headjs');
 $this->reset('script');
 
-$this->assign('title', read('App.title'));
+$this->assign('title', $htmlTitle);
 
 $this->Html->css('bootstrap', ['block' => true]);
 

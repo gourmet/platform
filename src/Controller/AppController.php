@@ -1,6 +1,7 @@
 <?php
 namespace App\Controller;
 
+use App\Listener\ViewVarsListener;
 use Cake\Controller\Controller;
 use Crud\Controller\ControllerTrait;
 
@@ -40,6 +41,8 @@ class AppController extends Controller
         $this->loadComponent('RequestHandler');
 
         $this->_setupCrud();
+
+        $this->eventManager()->on(new ViewVarsListener());
     }
 
     protected function _setupCrud()

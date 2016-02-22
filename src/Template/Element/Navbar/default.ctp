@@ -20,7 +20,7 @@ $title = Configure::read('App.title');
                 <span class="icon-bar"></span>
             </button>
 
-            <?= $this->Html->link($title, ['_name' => 'home'], ['class' => 'navbar-brand']) ?>
+            <?= $this->Html->link($brand, ['_name' => 'home'], ['class' => 'navbar-brand']) ?>
 
         </div>
 

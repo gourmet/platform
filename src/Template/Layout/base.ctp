@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<?= \Locale::getPrimaryLanguage(\Cake\I18n\I18n::locale()) ?>" class="no-js">
+<html lang="<?= $htmlLang ?>" class="no-js">
 
     <head>
 
@@ -9,11 +9,11 @@
         <![endif]-->
 
         <title>
-            <?= $this->fetch('title', read('App.title', env('HTTP_HOST'))) ?>
+            <?= $this->fetch('title', $htmlTitle) ?>
         </title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="<?= read('App.author') ?>">
+        <meta name="author" content="<?= $metaAuthor ?>">
         <?= $this->Html->meta('icon') ?>
         <?= $this->fetch('meta') ?>
         <?= $this->fetch('css') ?>

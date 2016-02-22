@@ -1,31 +1,24 @@
 <?php
-use Cake\Core\Configure;
+if (Cake\Core\Configure::read('debug')) {
+    echo $this->element('Error/development', compact('code', 'message', 'url'));
+    return;
+}
 
-if (Configure::read('debug')):
-    $this->layout = 'dev_error';
-
-    $this->assign('title', $message);
-    $this->assign('templateName', 'error400.ctp');
-
-    $this->start('file');
+$links = [
+    'url' => $this->Html->link($this->Url->build($url, true), $url),
+    'homepage' => $this->Html->link(__('homepage'), ['_name' => 'home']),
+];
 ?>
-<?php if (!empty($error->queryString)) : ?>
-    <p class="notice">
-        <strong>SQL Query: </strong>
-        <?= h($error->queryString) ?>
-    </p>
-<?php endif; ?>
-<?php if (!empty($error->params)) : ?>
-        <strong>SQL Query Params: </strong>
-        <?= Debugger::dump($error->params) ?>
-<?php endif; ?>
-<?= $this->element('auto_table_warning') ?>
-<?php
-    if (extension_loaded('xdebug')):
-        xdebug_print_function_stack();
-    endif;
 
-    $this->end();
-endif;
+<div class="container">
 
-echo $this->element('Layout/error', compact('code', 'message', 'url'));
+    <div class="jumbotron"><div class="container">
+
+        <h1><?= __("Oops!") ?></h1>
+
+        <p><?= __("We couldn't find {url}.", $links) ?>
+        <p><?= __("We apologize for the inconvenience. Go back to the {homepage}.", $links) ?></p>
+
+    </div></div>
+
+</div>

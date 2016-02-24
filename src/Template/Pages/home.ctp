@@ -20,17 +20,29 @@ $this->Html->css('rewrite.css', ['block' => true]);
 Debugger::checkSecurityKeys();
 ?>
 
-<h1>Gourmet <span class="small">/ɡɔrˈmeɪ/</span></h1>
+<header>
+    <?= $this->element('BootstrapUI.Navbar/default', ['class' => 'navbar navbar-default']) ?>
+</header>
 
-<blockquote>
-    <p>
-        [...] a cultural ideal associated with the culinary arts of fine
-        food and drink, or haute cuisine, which is characterised by refined,
-        even elaborate preparations and presentations of aesthetically
-        balanced meals of several contrasting, often quite rich courses [...]
-    </p>
-    <footer><cite title="Wikipedia">Wikipedia</cite></footer>
-</blockquote>
+<div class="container-fluid">
+
+    <div class="jumbotron">
+
+        <h1>Gourmet <span class="small">/ɡɔrˈmeɪ/</span></h1>
+
+        <blockquote>
+            <p>
+                [...] a cultural ideal associated with the culinary arts of fine
+                food and drink, or haute cuisine, which is characterised by refined,
+                even elaborate preparations and presentations of aesthetically
+                balanced meals of several contrasting, often quite rich courses [...]
+            </p>
+            <footer><cite title="Wikipedia">Wikipedia</cite></footer>
+        </blockquote>
+
+        <?= $this->Html->link(__('Try out Gourmet!'), '#', ['class' => 'btn btn-lg btn-success']) ?>
+
+    </div>
 
 <?php
 echo $this->Html->div(
@@ -102,3 +114,5 @@ if (!Validation::alphaNumeric('cakephp')) {
         'when configuring.'
     );
 }
+?>
+</div>

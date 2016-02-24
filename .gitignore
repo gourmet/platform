@@ -1,10 +1,12 @@
 # Used by package managers
-/components/*
+/bower_components/*
 /vendor/*
 
 # Used for temporary storage
 /logs/*
 /tmp/*
+/webroot/assets/*
+/webroot/css/*.css.map
 
 # Used for sensitive/volatile config
 /.debug

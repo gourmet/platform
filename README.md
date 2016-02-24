@@ -32,6 +32,7 @@ minification, etc.
 
 #### Development dependencies
 
+* [beelab/bowerphp][beelab/bowerphp] for managing web components' packages with [Bower][bower].
 * [cakephp/bake][bake/repo] - the official CakePHP bake tool.
 * [cakephp/cakephp-codesniffer][codesniffer/repo] - the official CakePHP code
 standard sniffs.
@@ -40,13 +41,13 @@ standard sniffs.
 * [cakephp/debug_kit][debug_kit/repo] - the official CakePHP debugging tool.
 * [codeception/specify][specify/repo] BDD code blocks for PHPUnit & Codeception.
 * [codeception/verify][verify/repo] BDD assertion library for PHPUnit.
-* [d11wtq/boris][boris/repo]
-* [gourmet/whoops][whoops/repo] to beautify errors and exceptions (only in debug
+* [psy/psysh][psysh/repo] runtime developer console, interactive debugger and REPL.
+* [gourmet/whoops][whoops/repo] to beautify errors and exceptions (only in debug.
 mode).
 
 ### CSS/JS assets
 
-Assets are installed using [robloach/component-installer][component/repo]:
+Assets are installed using [beelab/bowerphp][beelab/bowerphp]:
 
 * [twbs/bootstrap][bootstrap]
 * [jquery/jquery][jquery]
@@ -55,7 +56,8 @@ Assets are installed using [robloach/component-installer][component/repo]:
 
 It is assumed that you have the following installed globally:
 
-* [Composer][composer] - PHP package manager
+* [Composer][composer] - PHP package manager.
+* [Sass][sass] - SCSS converter.
 
 If (or once) you have them all installed, run:
 
@@ -94,22 +96,33 @@ use the resulting file in production. It has yet to be implemented._
 
 To enable `debug` mode without having to modify any file:
 
-```
+```sh
 touch .debug
 ```
 
 or use the `DEBUG` environment variable.
+
+Because we aren't using [AssetCompress][asset_compress/repo]' to convert `scss`
+(all implementations are broken), changes made to files in `webroot/scss` will
+not be rendered before the files are converted. To do so, use the `sass` gem like so:
+
+```sh
+sass --watch webroot/scss:webroot/css
+```
+
+Keep in mind that files in both `webroot/scss` and `webroot/css` need to be committed
+as they serve different purposes.
 
 ## Provisioning
 
 To keep things DRY and not re-invent the wheel, `ansible-galaxy` (the Ansible
 package manager) is used. To install the roles:
 
-```
+```sh
 ansible-galaxy install --role-file ansible/requirements.yml --force
 ```
 
-For more, read [Ansible's official documentation].
+For more, read [Ansible's official documentation][ansible/docs].
 
 ### Local development
 
@@ -177,10 +190,12 @@ Platform uses [semantic versioning][semver]:
 
 Copyright (c) 2015, Jad Bitar and licensed under [The MIT License][mit].
 
+[ansible/docs]://docs.ansible.com
 [asset_compress/repo]://github.com/markstory/asset_compress
 [bake/repo]://github.com/cakephp/bake
+[beelab/bowerphp]://github/beelab/bowerphp
 [bootstrap]:http://getbootstrap.com
-[boris/repo]://github.com/d11wtq/boris
+[bower]://bower.io
 [cakephp]:http://cakephp.org
 [cakephp/2033]://github.com/cakephp/cakephp/issues/2033
 [cakephp/repo]://github.com/cakephp/cakephp
@@ -206,6 +221,7 @@ Copyright (c) 2015, Jad Bitar and licensed under [The MIT License][mit].
 [monolog/repo]://github.com/seldaek/monolog
 [phinx/repo]://github.com/robmorgan/phinx
 [phpunit/repo]://github.com/sebastianbergmann/phpunit
+[psysh/repo]://github.com/bobthecow/psysh
 [robo]:http://robo.li
 [robo/repo]://github.com/gourmet/robo
 [rocketeer/repo]://github.com/anahkiasen/rocketeer
